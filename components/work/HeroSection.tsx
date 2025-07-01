@@ -2,8 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 export default function HeroSection() {
+  const t = useTranslations("WorkPage");
   return (
     <section className="pt-36 pb-20 px-4 md:px-8 relative">
       {/* Subtle background grid pattern */}
@@ -18,7 +20,7 @@ export default function HeroSection() {
         </svg>
       </div>
       
-      <div className="container mx-auto max-w-5xl relative z-10">
+      <div className="container mx-auto max-w-5xl relative z-10 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -26,12 +28,12 @@ export default function HeroSection() {
           className="mb-16 md:mb-24"
         >
           <h1 className="font-bellefair text-4xl md:text-6xl uppercase mb-6 leading-tight tracking-wider">
-            Our Work
+            {t("pageTitle")}
           </h1>
           
-          <div className="max-w-2xl">
-            <p className="font-avenirNext text-lg md:text-xl text-foreground/80">
-              A curated selection of our recent projects, showcasing our approach to design, development, and creative problem-solving.
+          <div className="max-w-2xl mx-auto">
+            <p className="font-avenirNext text-gray-600 text-lg md:text-xl text-foreground/80">
+              {t("pageSubtitle")}
             </p>
           </div>
         </motion.div>

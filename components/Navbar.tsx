@@ -1,12 +1,13 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import Logo from "./Logo";
 import AnimatedLogo from "./AnimatedLogo";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, ChevronUp } from "lucide-react";
 import TransitionLink from "./TransitionLink";
+import LanguageSwitcher from "./Languaje";
+import { useTranslations } from "next-intl";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -15,48 +16,52 @@ import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
-
-const navbarItems = {
-  services: [
-    { 
-      title: "UX DESIGN", 
-      href: "/services/ux-design", 
-      description: "User-centered design to create intuitive and engaging experiences."
-    },
-    { 
-      title: "SOFTWARE DEVELOPMENT", 
-      href: "/services/software-development", 
-      description: "Custom software solutions built with modern technologies for web, mobile, and desktop."
-    },
-    { 
-      title: "DIGITAL MARKETING", 
-      href: "/services/digital-marketing", 
-      description: "Strategic campaigns to grow your online presence and reach."
-    },
-  ],
-  links: [
-    { title: "WORK", href: "/work" },
-    { title: "ABOUT", href: "/about" },
-    { title: "BLOG", href: "/blog" },
-  ],
-  contact: { title: "GET IN TOUCH", href: "/contact" },
-};
 
 type NavbarProps = {
   invert?: boolean;
 };
 
 export function Navbar({ invert = false }: NavbarProps) {
+  const navT = useTranslations("Navigation");
+  const commonT = useTranslations("Common");
+  const servicesT = useTranslations("Services");
+  const serviceDescT = useTranslations("ServiceDescriptions");
+  
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const [isServicesOpen, setIsServicesOpen] = React.useState(false);
   const [showNavbar, setShowNavbar] = React.useState(true);
   const [scrollY, setScrollY] = React.useState(0);
   const lastScrollY = React.useRef(0);
+
+  const navbarItems = React.useMemo(() => ({
+    services: [
+      { 
+        title: servicesT("uxuiDesign"), 
+        href: "/services/ux-ui-design", 
+        description: serviceDescT("uxuiDesign")
+      },
+      { 
+        title: servicesT("softwareDevelopment"), 
+        href: "/services/software-development", 
+        description: serviceDescT("softwareDevelopment")
+      },
+      { 
+        title: servicesT("brandIdentity"), 
+        href: "/services/brand-creation", 
+        description: serviceDescT("brandCreation")
+      },
+    ],
+    links: [
+      { title: navT("work"), href: "/work" },
+      { title: navT("about"), href: "/about" },
+      { title: navT("blog"), href: "/blog" },
+      { title: navT("careers"), href: "/careers" },
+    ],
+    contact: { title: commonT("getInTouch"), href: "/contact" },
+  }), [navT, commonT, servicesT, serviceDescT]);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -114,77 +119,93 @@ export function Navbar({ invert = false }: NavbarProps) {
                   invert ? "text-white hover:text-black" : "text-black hover:text-black"
                 )}
               >
-                SERVICES
+                {navT("serviceMenu")}
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul
                   className={cn(
-                    "grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] rounded-md",
+                    "p-4 text-sm space-y-2 md:w-[320px] rounded-sm",
                     invert
-                      ? "bg-black border border-white shadow-lg"
+                      ? "bg-black border border-white/30 shadow-lg"
                       : "bg-white border border-gray-200 shadow-lg"
                   )}
                 >
-                  <li className="row-span-3">
-                    <NavigationMenuLink asChild>
-                      <TransitionLink
-                        className={cn(
-                          "flex h-full w-full select-none flex-col justify-center items-center rounded-md p-6 no-underline outline-none focus:shadow-md",
-                          invert
-                            ? "bg-gradient-to-b from-black to-gray-800"
-                            : "bg-gradient-to-b from-white to-gray-100"
-                        )}
-                        href="/services"
-                      >
-                        <svg
-                          viewBox="0 0 400 200"
-                          className="w-full h-full max-w-md"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="0.5"
-                        >
-                          {/* Horizontal divider */}
-                          <line x1="20" y1="100" x2="380" y2="100" strokeDasharray="4,2" />
-                          {/* Vertical divider */}
-                          <line x1="200" y1="20" x2="200" y2="180" strokeDasharray="4,2" />
-                          {/* Central focal circle */}
-                          <circle cx="200" cy="100" r="5" fill="currentColor" />
-                          {/* Peripheral circles */}
-                          <circle cx="100" cy="100" r="3" fill="currentColor" />
-                          <circle cx="300" cy="100" r="3" fill="currentColor" />
-                          <circle cx="200" cy="50" r="3" fill="currentColor" />
-                          <circle cx="200" cy="150" r="3" fill="currentColor" />
-                          {/* Connecting dashed lines */}
-                          <line x1="100" y1="100" x2="200" y2="50" strokeDasharray="2,2" />
-                          <line x1="300" y1="100" x2="200" y2="50" strokeDasharray="2,2" />
-                          <line x1="100" y1="100" x2="200" y2="150" strokeDasharray="2,2" />
-                          <line x1="300" y1="100" x2="200" y2="150" strokeDasharray="2,2" />
-                        </svg>
-                        <div
-                          className={cn("mb-2 mt-4 text-lg font-medium text-center", invert && "text-white")}
-                        >
-                          Our Services
-                        </div>
-                        <p
-                          className={cn(
-                            "text-sm leading-tight text-center",
-                            invert ? "text-gray-300" : "text-gray-600"
-                          )}
-                        >
-                          Discover strategic solutions to transform your business vision into reality.
-                        </p>
-                      </TransitionLink>
-                    </NavigationMenuLink>
-                  </li>
-                  {navbarItems.services.map((service) => (
-                    <ListItem
-                      key={service.title}
-                      title={service.title}
-                      href={service.href}
-                      invert={invert}
+                  {/* Services Overview Item */}
+                  <li className={cn(
+                    "transition-all duration-300 overflow-hidden group",
+                    invert 
+                      ? "hover:bg-white/10" 
+                      : "hover:bg-black/5"
+                  )}>
+                    <TransitionLink 
+                      href="/services"
+                      className={cn(
+                        "p-4 block border relative",
+                        invert 
+                          ? "border-white/30 text-white" 
+                          : "border-black/30 text-black"
+                      )}
                     >
-                      {service.description}
-                    </ListItem>
+                      <div className="flex justify-between items-center">
+                        <span className="font-bellefair tracking-wide">
+                          {navT("servicesOverview")}
+                        </span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="opacity-60">
+                          <path d="M12 4L12 20M4 12L20 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                      <span className={cn(
+                        "block mt-1 text-sm font-avenirNext",
+                        invert ? "text-white/60" : "text-black/60"
+                      )}>
+                        {navT("exploreServices")}
+                      </span>
+                      <span className={cn(
+                        "absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-300",
+                        invert ? "bg-white" : "bg-black"
+                      )}></span>
+                    </TransitionLink>
+                  </li>
+                  
+                  <div className={cn(
+                    "h-[1px] w-full my-1",
+                    invert ? "bg-white/10" : "bg-black/10"
+                  )}></div>
+                  
+                  {navbarItems.services.map((service) => (
+                    <li 
+                      key={service.title} 
+                      className={cn(
+                        "transition-all duration-300 overflow-hidden group",
+                        invert 
+                          ? "hover:bg-white/10" 
+                          : "hover:bg-black/5"
+                      )}
+                    >
+                      <TransitionLink 
+                        href={service.href}
+                        className={cn(
+                          "p-4 block border relative",
+                          invert 
+                            ? "border-white/20 text-white" 
+                            : "border-black/30 text-black"
+                        )}
+                      >
+                        <span className="font-bellefair tracking-wide">
+                          {service.title}
+                        </span>
+                        <span className={cn(
+                          "block mt-1 text-sm font-avenirNext opacity-0 max-h-0 group-hover:max-h-20 group-hover:opacity-100 transition-all duration-300 overflow-hidden",
+                          invert ? "text-white/70" : "text-black/70"
+                        )}>
+                          {service.description}
+                        </span>
+                        <span className={cn(
+                          "absolute bottom-0 left-0 h-[2px] w-0 group-hover:w-full transition-all duration-300",
+                          invert ? "bg-white" : "bg-black"
+                        )}></span>
+                      </TransitionLink>
+                    </li>
                   ))}
                 </ul>
               </NavigationMenuContent>
@@ -193,7 +214,7 @@ export function Navbar({ invert = false }: NavbarProps) {
               <NavigationMenuItem key={link.title}>
                 <TransitionLink href={link.href} 
                   className={cn(
-                    "group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50",
+                    "group uppercase inline-flex h-9 w-max items-center justify-center rounded-sm px-4 py-2 text-sm font-medium transition-colors focus:outline-none disabled:pointer-events-none disabled:opacity-50",
                     "font-bellefair text-base",
                     invert 
                       ? "text-white hover:bg-white/20 hover:text-black" 
@@ -208,32 +229,46 @@ export function Navbar({ invert = false }: NavbarProps) {
         </NavigationMenu>
       </div>
 
-      {/* Right Section: Contact Button */}
-      <div className="hidden md:flex flex-1 justify-end items-center">
-        <Link href={navbarItems.contact.href} passHref>
+      {/* Right Section: Contact Button and Language Switcher */}
+      <div className="hidden md:flex flex-1 justify-end items-center space-x-4">
+        {/* Language Switcher */}
+        <LanguageSwitcher 
+          className={cn(invert ? "text-white" : "text-black")}
+          buttonClassName={cn(invert ? "text-white" : "text-black")}
+        />
+
+        <TransitionLink href={navbarItems.contact.href} >
           <Button
             className={cn(
-              "font-bellefair",
+              "font-bellefair uppercase",
               invert ? "bg-primary border border-white/0 hover:border-white hover:bg-black" : "bg-black"
             )}
           >
             {navbarItems.contact.title}
           </Button>
-        </Link>
+        </TransitionLink>
       </div>
 
       {/* Mobile Hamburger Button */}
-      <button
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-        className="md:hidden p-2 z-50 relative"
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-      >
-        {isMenuOpen ? (
-          <X className="w-8 h-8 text-white absolute right-2 top-2" />
-        ) : (
-          <Menu className={cn("w-8 h-8", invert ? "text-white" : "text-black")} />
-        )}
-      </button>
+      <div className="md:hidden flex items-center space-x-4">
+        {/* Language Switcher for Mobile - Visible even when menu is closed */}
+        <LanguageSwitcher 
+          className={cn(isMenuOpen ? "text-white" : invert ? "text-white" : "text-black")}
+          buttonClassName={cn(isMenuOpen ? "text-white" : invert ? "text-white" : "text-black")}
+        />
+        
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="p-2 z-50 relative"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {isMenuOpen ? (
+            <X className="w-8 h-8 text-white absolute right-0 top-2 hidden " />
+          ) : (
+            <Menu className={cn("w-8 h-8", invert ? "text-white" : "text-black")} />
+          )}
+        </button>
+      </div>
 
       {/* Mobile Menu Overlay */}
       <AnimatePresence>
@@ -274,7 +309,7 @@ export function Navbar({ invert = false }: NavbarProps) {
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
                   className="w-full flex justify-between items-center p-2 text-xl font-bellefair text-white hover:bg-black"
                 >
-                  SERVICES
+                  {navT("serviceMenu")}
                   {isServicesOpen ? (
                     <ChevronUp strokeWidth={1} />
                   ) : (
@@ -290,6 +325,26 @@ export function Navbar({ invert = false }: NavbarProps) {
                       transition={{ duration: 0.3 }}
                       className="pl-4 space-y-4 overflow-hidden mt-2 border-l border-white/10"
                     >
+                      {/* Services Overview for Mobile */}
+                      <motion.div
+                        className="mb-4"
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                      >
+                        <TransitionLink
+                          href="/services"
+                          className="font-bellefair uppercase text-base text-white hover:text-gray-300 transition-colors block"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {navT("servicesOverview")}
+                        </TransitionLink>
+                        <p className="text-sm text-gray-400 mt-1 font-avenirNext pr-4">
+                          {navT("exploreServices")}
+                        </p>
+                      </motion.div>
+
+                      <div className="h-[1px] w-full my-2 bg-white/10"></div>
+                      
                       {navbarItems.services.map((service, index) => (
                         <motion.div 
                           key={service.href} 
@@ -319,7 +374,7 @@ export function Navbar({ invert = false }: NavbarProps) {
                 <TransitionLink
                   key={link.href}
                   href={link.href}
-                  className="block font-bellefair text-xl text-white hover:text-gray-300 transition-colors p-2"
+                  className="block uppercase font-bellefair text-xl text-white hover:text-gray-300 transition-colors p-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.title}
@@ -328,7 +383,7 @@ export function Navbar({ invert = false }: NavbarProps) {
 
               <TransitionLink
                 href={navbarItems.contact.href}
-                className="block font-bellefair text-xl text-white bg-primary/20 hover:bg-primary/30 p-3 mt-6 text-center transition-colors rounded"
+                className="block uppercase font-bellefair text-xl text-white bg-primary hover:bg-primary/80 p-3 mt-6 text-center transition-colors rounded"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {navbarItems.contact.title}
@@ -346,16 +401,13 @@ type ListItemProps = React.ComponentPropsWithoutRef<"a"> & {
   invert?: boolean;
 };
 
-const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  ListItemProps
->(({ className, title, children, invert, href = "#", ...props }, ref) => {
+const ListItem = ({ className, title, children, invert, href = "#", ...props }: ListItemProps) => {
   return (
     <li>
       <TransitionLink
         href={href}
         className={cn(
-          "flex select-none flex-col justify-center rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+          "flex select-none flex-col justify-center rounded-sm p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
           invert ? "text-white" : "text-black",
           className
         )}
@@ -372,5 +424,5 @@ const ListItem = React.forwardRef<
       </TransitionLink>
     </li>
   );
-});
+};
 ListItem.displayName = "ListItem";

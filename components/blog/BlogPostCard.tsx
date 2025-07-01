@@ -3,11 +3,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { BlogPost } from '@/types/blog';
 
 type CardType = {
   className: string;
   heightClass: string;
+};
+
+type ServiceCategoryType = {
+  name: string;
+  color: string;
 };
 
 interface BlogPostCardProps {
@@ -17,6 +23,7 @@ interface BlogPostCardProps {
   featured?: boolean;
   cardTypes?: CardType[];
   featuredTypes?: CardType[];
+  serviceCategory?: ServiceCategoryType;
 }
 
 export default function BlogPostCard({ 
@@ -25,7 +32,8 @@ export default function BlogPostCard({
   type, 
   featured = false,
   cardTypes,
-  featuredTypes
+  featuredTypes,
+  serviceCategory
 }: BlogPostCardProps) {
   
   // Default card types if not provided
@@ -56,7 +64,7 @@ export default function BlogPostCard({
   
   return (
     <motion.div
-      className={`relative overflow-hidden rounded-md shadow-md ${cardType.className}`}
+      className={`relative overflow-hidden rounded-sm shadow-md ${cardType.className}`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -64,24 +72,36 @@ export default function BlogPostCard({
     >
       <Link href={post.href} className="block h-full w-full">
         <div className={`group relative w-full h-full ${cardType.heightClass}`}>
-          {/* Use next/image in production for better image optimization */}
-          <img
-            src={post.image}
-            alt={post.name}
-            className="absolute inset-0 h-full w-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 grayscale-[30%]"
-            loading="lazy" 
-          />
+          {/* Service category label - responsive text size */}
+          {serviceCategory && (
+            <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4 z-10">
+              <span className={`px-1.5 py-0.5 sm:px-2 sm:py-1 rounded-sm text-[10px] xs:text-xs sm:text-sm font-bellefair ${serviceCategory.color}`}>
+                {serviceCategory.name}
+              </span>
+            </div>
+          )}
           
-          {/* Overlay with text */}
+          <div className="absolute inset-0 h-full w-full">
+            <Image
+              src={post.image}
+              alt={post.name}
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 grayscale-[30%]"
+              priority={featured && index === 0}
+            />
+          </div>
+          
+          {/* Overlay with text - responsive padding and typography */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300">
-            <div className="absolute bottom-0 p-4 w-full">
-              <h2 className="font-bellefair text-xl text-white uppercase">{post.name}</h2>
-              <p className="font-avenirNext text-sm text-gray-200 mt-1 line-clamp-2">{post.tagline}</p>
+            <div className="absolute bottom-0 p-2 sm:p-3 md:p-4 w-full">
+              <h2 className="font-bellefair text-base sm:text-lg md:text-xl text-white uppercase line-clamp-2">{post.name}</h2>
+              <p className="font-avenirNext text-xs sm:text-sm text-gray-200 mt-0.5 sm:mt-1 line-clamp-2 hidden xs:block">{post.tagline}</p>
               
-              <div className="flex items-center gap-2 mt-2">
-                <span className="text-xs text-white/80">{post.category}</span>
-                <span className="text-white/40">•</span>
-                <span className="text-xs text-white/80">{post.type}</span>
+              <div className="flex items-center gap-1 sm:gap-2 mt-1 sm:mt-2">
+                <span className="text-[10px] xs:text-xs text-white/80">{post.category}</span>
+                <span className="text-white/40 text-[10px] xs:text-xs">•</span>
+                <span className="text-[10px] xs:text-xs text-white/80">{post.type}</span>
               </div>
             </div>
           </div>

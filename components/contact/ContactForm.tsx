@@ -8,15 +8,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from "@/components/ui/button";
 import { Check, Send } from "lucide-react";
-
-const budgetOptions = [
-  { value: "30k-50k", label: "30K - 50K" },
-  { value: "15k-30k", label: "15K - 30K" },
-  { value: "8k-15k", label: "8K - 15K" },
-  { value: "idk", label: "I don't know yet" },
-];
+import { useTranslations } from 'next-intl';
 
 export function ContactForm() {
+  const t = useTranslations('ContactPage.form');
+  const budgetOptions = t.raw('budgetOptions') as Array<{
+    value: string;
+    label: string;
+  }>;
+  
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -67,21 +67,21 @@ export function ContactForm() {
     <Card className="lg:col-span-2 overflow-hidden">
       <CardHeader className="text-center mb-10 mt-10">
         <CardTitle className="text-4xl font-bellefair uppercase">
-          Work inquiries
+          {t('title')}
         </CardTitle>
         <CardDescription className="font-avenirNext text-xl">
-          Fill out the form below to discuss your project with us
+          {t('description')}
         </CardDescription>
       </CardHeader>
       <CardContent className="pt-6">
         <form onSubmit={handleSubmit} className="space-y-6 font-avenirNext p-6">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             <div className="space-y-2 ">
-              <Label htmlFor="name">Full Name</Label>
+              <Label htmlFor="name">{t('nameLabel')}</Label>
               <Input
                 id="name"
                 name="name"
-                placeholder="John Doe"
+                placeholder={t('namePlaceholder')}
                 required
                 className="border-0 border-b border-gray-300 rounded-none px-0 py-2 focus:border-black focus-visible:ring-0"
                 value={formState.name}
@@ -90,12 +90,12 @@ export function ContactForm() {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="email">Email</Label>
+              <Label htmlFor="email">{t('emailLabel')}</Label>
               <Input
                 id="email"
                 name="email"
                 type="email"
-                placeholder="john@example.com"
+                placeholder={t('emailPlaceholder')}
                 required
                 className="border-0 border-b border-gray-300 rounded-none px-0 py-2 focus:border-black focus-visible:ring-0"
                 value={formState.email}
@@ -104,11 +104,11 @@ export function ContactForm() {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="company">Company</Label>
+              <Label htmlFor="company">{t('companyLabel')}</Label>
               <Input
                 id="company"
                 name="company"
-                placeholder="Your company"
+                placeholder={t('companyPlaceholder')}
                 className="border-0 border-b border-gray-300 rounded-none px-0 py-2 focus:border-black focus-visible:ring-0"
                 value={formState.company}
                 onChange={handleInputChange}
@@ -116,12 +116,12 @@ export function ContactForm() {
             </div>
             
             <div className="space-y-2">
-              <Label htmlFor="phone">Phone</Label>
+              <Label htmlFor="phone">{t('phoneLabel')}</Label>
               <Input
                 id="phone"
                 name="phone"
                 type="tel"
-                placeholder="+1 (555) 000-0000"
+                placeholder={t('phonePlaceholder')}
                 className="border-0 border-b border-gray-300 rounded-none px-0 py-2 focus:border-black focus-visible:ring-0"
                 value={formState.phone}
                 onChange={handleInputChange}
@@ -130,11 +130,11 @@ export function ContactForm() {
           </div>
           
           <div className="space-y-2">
-            <Label htmlFor="message">Message</Label>
+            <Label htmlFor="message">{t('messageLabel')}</Label>
             <Textarea
               id="message"
               name="message"
-              placeholder="Tell us about your project..."
+              placeholder={t('messagePlaceholder')}
               className="border-0 border-b border-gray-300 rounded-none px-0 py-2 min-h-32 focus:border-black focus-visible:ring-0"
               required
               value={formState.message}
@@ -143,7 +143,7 @@ export function ContactForm() {
           </div>
           
           <div className="space-y-2">
-            <Label>Budget Range</Label>
+            <Label>{t('budgetLabel')}</Label>
             <RadioGroup
               className="grid grid-cols-1 md:grid-cols-2 gap-2 max-w-md"
               value={formState.budget}
@@ -172,17 +172,17 @@ export function ContactForm() {
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1"></circle>
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                   </svg>
-                  Sending...
+                  {t('sending')}
                 </span>
               ) : isSubmitted ? (
-                <span className="flex items-center">
+                <span className="flex items-center font-bellefair uppercase tracking-wider">
                   <Check className="mr-2 h-4 w-4" />
-                  Sent!
+                  {t('sent')}
                 </span>
               ) : (
-                <span className="flex items-center">
+                <span className="flex items-center font-bellefair uppercase tracking-wider">
                   <Send className="mr-2 h-4 w-4" />
-                  Send Message
+                  {t('submitButton')}
                 </span>
               )}
             </Button>

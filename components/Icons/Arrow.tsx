@@ -10,7 +10,6 @@ interface ArrowProps extends React.SVGProps<SVGSVGElement> {
 
 const Arrow: React.FC<ArrowProps> = ({
     direction = 'down',
-    color = 'currentColor',
     stroke = 1,
     className,
     ...props  

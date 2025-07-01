@@ -2,27 +2,20 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
-// Process step data
-const processSteps = [
-  {
-    number: "01",
-    title: "Discovery",
-    description: "We begin by understanding your business goals, target audience, and current challenges to create a tailored strategy."
-  },
-  {
-    number: "02",
-    title: "Implementation",
-    description: "Our team brings your vision to life with precision and expertise, keeping you involved throughout the development process."
-  },
-  {
-    number: "03",
-    title: "Optimization",
-    description: "We continuously refine and enhance your solution based on data and feedback to ensure long-term success."
-  }
-];
+interface ProcessStep {
+  number: string;
+  title: string;
+  description: string;
+}
 
 export function ProcessSection() {
+  const t = useTranslations("ServicesPage");
+  
+  // Process step data
+  const processSteps = t.raw("process.steps") as ProcessStep[];
+
   return (
     <section className="py-24 relative overflow-hidden bg-gray-50">
       {/* Simplified background decorative element */}
@@ -41,8 +34,8 @@ export function ProcessSection() {
       
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-xl mx-auto mb-16 text-center">
-          <h2 className="font-bellefair text-4xl md:text-5xl uppercase mb-4">Our Process</h2>
-          <p className="text-gray-600 font-avenirNext">A streamlined approach designed to deliver exceptional results</p>
+          <h2 className="font-bellefair text-4xl md:text-5xl uppercase mb-4">{t("process.title")}</h2>
+          <p className="text-gray-600 font-avenirNext">{t("process.subtitle")}</p>
         </div>
         
         {/* Desktop version - simplified vertical timeline */}
@@ -163,7 +156,7 @@ export function ProcessSection() {
                   </svg>
                 </div>
               </div>
-              <span className="text-xs font-avenirNext text-gray-500">Continuous Improvement</span>
+              <span className=" font-avenirNext text-gray-500">{t("continuousImprovement")}</span>
             </motion.div>
         </div>
         
@@ -252,7 +245,7 @@ export function ProcessSection() {
                 </svg>
               </div>
             </div>
-            <span className="font-avenirNext text-sm text-gray-500">Continuous improvement cycle</span>
+            <span className="font-avenirNext text-gray-500">{t("continuousImprovementCycle")}</span>
           </motion.div>
         </div>
       </div>

@@ -1,47 +1,57 @@
+"use client";
+
 import React from "react";
 import ServiceItem from "./ServiceItem";
-
-const servicesData = [
-  {
-    title: "UX/UI DESIGN",
-    content:
-      "Our UX/UI Design service focuses on creating intuitive and engaging user experiences. We ensure that your digital products are not only visually appealing but also user-friendly, enhancing customer satisfaction and loyalty.",
-  },
-  {
-    title: "SOFTWARE DEVELOPMENT",
-    content:
-      "Our Software Development service offers end-to-end solutions tailored to your business needs. We leverage the latest technologies to build scalable and robust applications that drive efficiency and innovation.",
-  },
-  {
-    title: "BRAND CREATION",
-    content:
-      "Our Brand Creation service helps you establish a strong and memorable brand identity. We work with you to develop a brand strategy that resonates with your target audience and sets you apart from the competition.",
-  },
-];
+import { useTranslations } from "next-intl";
 
 export default function Services() {
-  return (
-    <div className="px-6 py-8 mx-auto flex flex-col gap-8">
-      {/* Title Section */}
-      <div className="text-center">
-        <h2 className="text-4xl font-bellefair text-foreground">
-          OUR SERVICES
-        </h2>
-        <p className="mt-2 text-lg text-gray-600 font-avenirNext">
-          We craft digital experiences that connect your brand with your audience.
-        </p>
-      </div>
+  const t = useTranslations("Services");
+  const commonT = useTranslations("Common");
 
-      {/* Services List */}
-      <div className="flex flex-col gap-4">
-        {servicesData.map((service, index) => (
-          <ServiceItem
-            key={index}
-            title={service.title}
-            content={service.content}
-          />
-        ))}
+  const servicesData = [
+    {
+      title: t("uxuiDesign"),
+      content: t("uxuiDesignDesc"),
+      href: "/services/ux-ui-design"
+    },
+    {
+      title: t("softwareDevelopment"),
+      content: t("softwareDevelopmentDesc"),
+      href: "/services/software-development"
+    },
+    {
+      title: t("brandIdentity"),
+      content: t("brandIdentityDesc"),
+      href: "/services/brand-creation"
+    },
+  ];
+
+  return (
+    <section className="py-24 bg-background relative overflow-hidden">
+      {/* Subtle background grid pattern */}
+      
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Title Section */}
+        <div className="text-center mb-16">
+          <h2 className="font-bellefair text-4xl md:text-5xl uppercase mb-4">{t("title")}</h2>
+          <p className="font-avenirNext text-lg text-gray-600 max-w-2xl mx-auto">
+            {t("subtitle")}
+          </p>
+        </div>
+
+        {/* Services List */}
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          {servicesData.map((service, index) => (
+            <ServiceItem
+              key={index}
+              title={service.title}
+              content={service.content}
+              href={service.href}
+              learnMoreText={commonT("learnMore")}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

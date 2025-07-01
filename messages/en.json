@@ -1,0 +1,366 @@
+{
+  "Common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "seeAllWork": "See All Work",
+    "getInTouch": "Get in Touch",
+    "ourWork": "Our Work",
+    "servicesOverview": "Services Overview",
+    "ourServices": "Our Services",
+    "viewPosition": "View Position",
+    "noOpenPositions": "No Open Positions",
+    "noOpenPositionsDescription": "We don't have any open positions at the moment, but we're always on the lookout for exceptional talent. Please check back later or send us your resume for future opportunities.",
+    "backToCareers": "Back to Careers", 
+    "benefits": "Benefits",
+    "requirements": "Requirements",
+    "responsibilities": "Responsibilities",
+    "submitApplication": "Submit Application",
+    "projectGallery": "Project Gallery",
+    "brandIdentity": "Brand Identity",
+    "applicationSubmitted": "Application Submitted",
+    "applicationSubmittedDescription": "Thank you for your interest in joining our team. We will review your application and contact you soon.",
+    "applyNow": "Apply Now",
+    "applyNowDescription": "Share your background and explain what makes you an ideal candidate for this position",
+    "submitting": "Submitting...",
+    "fullName": "Full Name",
+    "email": "Email",
+    "phone": "Phone",
+    "tellUs": "Tell us a bit about yourself",
+    "resume": "Resume/CV",
+    "coverLetter": "Cover Letter",
+    "portfolio": "Portfolio / Additional Documents",
+    "uploadFile": "Select file",
+    "acceptedFormats": "Accepted formats: PDF, DOC, DOCX",
+    "fullNamePlaceholder": "Enter your full name",
+    "emailPlaceholder": "Enter your email",
+    "phonePlaceholder": "Enter your phone number",
+    "tellUsAboutYouPlaceholder": "Share your background and explain what makes you an ideal candidate for this position",
+    "backToAllArticles": "Back to all articles",
+    "by": "By",
+    "discussYourProject": "Discuss Your Project",
+    "overview": "Overview",
+    "technologies": "Technologies",
+    "expertise": "Expertise",
+    "weDeliverSolutions": "We deliver solutions that drive tangible results for your business.",
+    "keyBenefits": "Key Benefits",
+    "ourProcess": "Our Process",
+    "methodicalApproach": "A methodical approach to deliver exceptional results.",
+    "viewCaseStudy": "View Case Study",
+    "seeHowWeDeliveredResults": "See how we've delivered results for our clients.",
+    "featuredWork": "Featured Work",
+    "readyToStartYourProject": "Ready to Start Your Project?",
+    "letUsDiscussHowWeCanHelpYouAchieveYourBusinessGoals": "Let's discuss how we can help you achieve your business goals with our tailored solutions.",
+    "contactUs": "Contact Us",
+    "exploreOurWork": "Explore Our Work",
+    "projectOverview": "Project Overview",
+    "theChallenge": "The Challenge",
+    "ourApproach": "Our Approach",
+    "client": "Client",
+    "year": "Year",
+    "duration": "Duration",
+    "ourRole": "Our Role",
+    "colorPalette": "Color Palette",
+    "typography": "Typography",
+    "primaryFont": "Primary Font",
+    "secondaryFont": "Secondary Font",
+    "resultsOutcomes": "Results & Outcomes",
+    "nextProject": "Next Project",
+    "viewProject": "View Project"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "work": "Work",
+    "blog": "Blog",
+    "contact": "Contact",
+    "careers": "Careers",
+    "servicesOverview": "SERVICES OVERVIEW",
+    "exploreServices": "Explore our full range of services",
+    "serviceMenu": "SERVICES"
+  },
+  "ServiceDescriptions": {
+    "uxuiDesign": "User-centered design to create intuitive and engaging experiences.",
+    "softwareDevelopment": "Custom software solutions built with modern technologies for web, mobile, and desktop.",
+    "brandCreation": "Strategic branding to establish a strong and memorable identity for your business."
+  },
+  "Home": {
+    "heroTitle": "Your Vision, Our Expertise",
+    "heroDescription": "At Hestia Labs, we are more than just a software engineering agency — we are your partners in innovation. Our mission is to empower businesses with cutting-edge technology solutions that drive growth and success in a rapidly evolving digital world.",
+    "seeOurWork": "See Our Work",
+    "projectsTitle": "Our Work",
+    "projectsDescription": "Explore our portfolio of innovative digital solutions that have helped businesses transform and grow.",
+    "contactTitle": "Let's Work Together",
+    "contactDescription": "Ready to bring your vision to life? We're here to help turn your ideas into reality with our expertise in design and development."
+  },
+  "Services": {
+    "softwareDevelopment": "SOFTWARE DEVELOPMENT",
+    "uxuiDesign": "UX/UI DESIGN",
+    "brandIdentity": "BRAND IDENTITY",
+    "cloudSolutions": "Cloud Solutions",
+    "mobileApps": "Mobile Applications",
+    "digitalStrategy": "Digital Strategy",
+    "title": "Our Services",
+    "subtitle": "We craft digital experiences that connect your brand with your audience.",
+    "uxuiDesignDesc": "Our UX/UI Design service focuses on creating intuitive and engaging user experiences. We ensure that your digital products are not only visually appealing but also user-friendly, enhancing customer satisfaction and loyalty.",
+    "softwareDevelopmentDesc": "Our Software Development service offers end-to-end solutions tailored to your business needs. We leverage the latest technologies to build scalable and robust applications that drive efficiency and innovation.",
+    "brandIdentityDesc": "Our Brand Creation service helps you establish a strong and memorable brand identity. We work with you to develop a brand strategy that resonates with your target audience and sets you apart from the competition."
+  },
+  "ServicesPage": {
+    "pageTitle": "Our Services",
+    "pageSubtitle": "We deliver exceptional solutions tailored to your business needs.",
+    "aboutServicesTitle": "About Our Services",
+    "expertiseTitle": "Our Expertise",
+    "continuousImprovement": "Continuous Improvement",
+    "continuousImprovementCycle": "Continuous improvement cycle",
+    "servicesSection": {
+      "paragraph1": "We provide comprehensive digital solutions designed to elevate your business presence and operational efficiency. Our services are built on the foundation of technical excellence and strategic thinking, ensuring that every solution we deliver serves your specific business objectives.",
+      "paragraph2": "Each project begins with a thorough understanding of your needs, followed by meticulous planning and execution. We maintain transparent communication throughout the process, allowing you to have complete visibility and input. Our commitment extends beyond project delivery—we offer ongoing support to ensure your continued success.",
+      "approachTitle": "Our Approach",
+      "approachDescription": "We believe in a collaborative approach that puts your goals at the center of everything we do. By understanding your unique challenges, we can deliver tailored solutions."
+    },
+    "servicesList": {
+      "softwareDevelopment": {
+        "title": "Software Development",
+        "description": "Custom software solutions built with modern technologies for web, mobile, and desktop."
+      },
+      "digitalMarketing": {
+        "title": "Digital Marketing",
+        "description": "Strategic campaigns to grow your online presence and reach."
+      },
+      "uxDesign": {
+        "title": "UX Design",
+        "description": "User-centered design to create intuitive and engaging experiences."
+      }
+    },
+    "process": {
+      "title": "Our Process",
+      "subtitle": "A streamlined approach designed to deliver exceptional results",
+      "steps": [
+        {
+          "number": "01",
+          "title": "Discovery",
+          "description": "We begin by understanding your business goals, target audience, and current challenges to create a tailored strategy."
+        },
+        {
+          "number": "02",
+          "title": "Implementation",
+          "description": "Our team brings your vision to life with precision and expertise, keeping you involved throughout the development process."
+        },
+        {
+          "number": "03",
+          "title": "Optimization",
+          "description": "We continuously refine and enhance your solution based on data and feedback to ensure long-term success."
+        }
+      ]
+    }
+  },
+  "AboutPage": {
+    "heroSection": {
+      "mainTitle": "Our strength is in innovation and partnership",
+      "mainTitlePrefix": "Our strength is in",
+      "innovationWord": "innovation",
+      "andWord": "and",
+      "partnershipWord": "partnership",
+      "paragraph1": "At Hestia Labs, we believe that our success is rooted in strong partnerships with our clients. We work hand in hand to bring their ideas to life, placing collaboration, creativity, and technology at the heart of everything we do.",
+      "paragraph2": "Hestia Labs was built on the desire to do things differently. We are committed to creating high-quality software solutions without compromising transparency, integrity, or the innovation that drives us.",
+      "paragraph3": "At Hestia Labs, we're more than just a team — we're a family. We value creativity, flexibility, and a supportive work environment, where each member is encouraged to bring their best to every project, while maintaining a healthy balance between personal and professional life.",
+      "scrollDown": "Scroll Down"
+    },
+    "companyFacts": {
+      "title": "Our Story by the Numbers",
+      "facts": [
+        {
+          "metric": "2",
+          "label": "Founding Brothers",
+          "description": "Our journey began with two brothers who shared a vision for innovation and excellence in digital solutions."
+        },
+        {
+          "metric": "100%",
+          "label": "Client Satisfaction",
+          "description": "We pride ourselves on our perfect track record of delivering solutions that meet and exceed client expectations."
+        },
+        {
+          "metric": "∞",
+          "label": "Cups of Coffee",
+          "description": "Fueling our creativity and powering late-night coding sessions to bring your ideas to life."
+        }
+      ]
+    },
+    "valuesPhilosophy": {
+      "title": "Fostering innovation while prioritizing balance.",
+      "subtitle": "At Hestia Labs, we believe that our strength comes from a team that is inspired and balanced. We share a passion for technology, creativity, and building a supportive work environment.",
+      "values": [
+        {
+          "number": "01",
+          "text": "Our team members stay with us because they're empowered to grow and innovate without limits."
+        },
+        {
+          "number": "02",
+          "text": "We trust our team to manage their time effectively, ensuring a healthy balance between productivity and life outside work."
+        },
+        {
+          "number": "03",
+          "text": "We recognize that everyone has a life outside the office, and we're committed to providing a supportive environment for personal and professional growth."
+        }
+      ]
+    },
+    "teamSection": {
+      "title": "Our Team",
+      "description": "Our diverse team of passionate professionals brings together expertise across design, development, and strategy to create exceptional digital experiences.",
+      "teamMember": "Team Member",
+      "position": "Position"
+    },
+    "joinUsCTA": {
+      "title": "Join Our Journey",
+      "description": "Whether you're looking to partner with us on a project or join our team, we'd love to hear from you.",
+      "contactUs": "Contact Us",
+      "careers": "Careers"
+    }
+  },
+  "Footer": {
+    "copyright": "© {year} Hestia Labs. All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "sectionTitles": {
+      "office": "Office",
+      "navigation": "Navigation",
+      "connect": "Connect",
+      "newsletter": "Newsletter"
+    },
+    "newsletter": {
+      "description": "Stay updated with our latest news and exclusive offers",
+      "placeholder": "Enter your email",
+      "success": "Thank you for subscribing!"
+    },
+    "legal": {
+      "privacy": "Privacy",
+      "terms": "Terms", 
+      "sitemap": "Sitemap"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    },
+    "links": {
+      "work": "Work",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "uxui": "UX/UI Design",
+      "software": "Software Development",
+      "brand": "Brand Creation"
+    }
+  },
+  "ContactPage": {
+    "metadata": {
+      "title": "Contact Us | Hestia Labs",
+      "description": "Get in touch with the Hestia Labs team for business inquiries, careers, or press."
+    },
+    "heading": "Let's talk",
+    "subheading": "We can't wait to hear from you",
+    "contactOptions": [
+      {
+        "id": "careers",
+        "title": "Careers",
+        "email": "careers@hestialabs.io",
+        "description": "Join our amazing team"
+      },
+      {
+        "id": "press",
+        "title": "Press",
+        "email": "press@hestialabs.io",
+        "description": "Get in touch for media inquiries"
+      }
+    ],
+    "form": {
+      "title": "Send us a message",
+      "description": "Fill out the form below and we'll get back to you as soon as possible.",
+      "nameLabel": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "emailLabel": "Your Email",
+      "emailPlaceholder": "Enter your email",
+      "companyLabel": "Company",
+      "companyPlaceholder": "Your company",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "+1 (555) 000-0000",
+      "messageLabel": "Your Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "budgetLabel": "Budget Range",
+      "budgetOptions": [
+        { "value": "30k-50k", "label": "30K - 50K" },
+        { "value": "15k-30k", "label": "15K - 30K" },
+        { "value": "8k-15k", "label": "8K - 15K" },
+        { "value": "idk", "label": "I don't know yet" }
+      ],
+      "sending": "Sending...",
+      "sent": "Sent!",
+      "submitButton": "Send Message",
+      "successMessage": "Your message has been sent! We'll get back to you soon.",
+      "errorMessage": "There was an error sending your message. Please try again."
+    },
+    "footer": "Hestia Labs — Creating exceptional digital experiences"
+  },
+  "BlogPage": {
+    "metadata": {
+      "title": "Blog | Hestia Labs",
+      "description": "Explore our blog for the latest insights, trends, and news in design, development, and digital innovation."
+    },
+    "hero": {
+      "title": "Our Blog",
+      "subtitle": "Insights, thoughts, and ideas from our team"
+    },
+    "featured": {
+      "title": "Featured Articles",
+      "subtitle": "Discover our most impactful content",
+      "readMore": "Read More"
+    },
+    "categories": {
+      "all": "All",
+      "uxui": "UX/UI",
+      "branding": "Branding",
+      "development": "Development"
+    },
+    "filters": {
+      "title": "Latest Articles",
+      "resultsCount": "{count} articles found",
+      "filterByCategory": "Filter by category",
+      "searchPlaceholder": "Search articles...",
+      "noResults": "No articles found matching your criteria",
+      "loadMore": "Load More"
+    },
+    "postInfo": {
+      "postedOn": "Posted on",
+      "postedBy": "by",
+      "readTime": "{minutes} min read",
+      "categories": "Categories:"
+    }
+  },
+  "WorkPage": {
+    "pageTitle": "Our Work",
+    "pageSubtitle": "A curated selection of our recent projects, showcasing our approach to design, development, and creative problem-solving."
+  },
+  "CareersPage": {
+    "HeroSection": {
+      "title": "Join Our Team",
+      "description": "We are always looking for talented individuals who are passionate about creating innovative solutions."
+    },  
+    "JobListings": {
+      "title": "Open Positions",
+      "description": "We are always looking for talented individuals who are passionate about creating innovative solutions.",
+      "buttonText": "Contact Us"
+    },
+    "PhilosophySection": {
+      "title": "Our Philosophy",
+      "description": "At Hestia Labs, we believe in fostering a collaborative environment where creativity thrives and innovation is celebrated. We value diversity of thought and background, recognizing that our strength lies in our different perspectives coming together to solve complex problems.",
+      "description2": "Our team members enjoy competitive compensation, flexible work arrangements, professional development opportunities, and a supportive culture that prioritizes work-life balance."
+    },
+    "CTASection": {
+      "title": "Don't See a Perfect Match?",
+      "description": "We are always looking for talented individuals who are passionate about creating innovative solutions.",
+      "buttonText": "Contact Us"
+    }
+  }
+  
+} 

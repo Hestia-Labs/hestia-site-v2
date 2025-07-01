@@ -2,8 +2,10 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function HeroSection() {
+  const t = useTranslations("AboutPage.heroSection");
   const textRef = useRef<HTMLDivElement>(null);
 
   // Text reveal animation on scroll
@@ -46,7 +48,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Our strength is in 
+          {t("mainTitlePrefix")} 
           <span className="block sm:inline-block">
             <motion.span
               className="relative inline-block mr-2"
@@ -60,9 +62,9 @@ export function HeroSection() {
                 animate={{ width: "100%" }}
                 transition={{ duration: 0.5, delay: 1.2 }}
               />
-              <span className="relative z-10 px-1 text-3xl md:text-5xl"> innovation </span>
+              <span className="relative z-10 px-1 text-3xl md:text-5xl"> {t("innovationWord")} </span>
             </motion.span>
-            <span className="relative z-10 px-1 text-3xl md:text-5xl">and</span> 
+            <span className="relative z-10 px-1 text-3xl md:text-5xl">{t("andWord")}</span> 
             <motion.span
               className="relative inline-block ml-2"
               initial={{ opacity: 0 }}
@@ -75,7 +77,7 @@ export function HeroSection() {
                 animate={{ width: "100%" }}
                 transition={{ duration: 0.5, delay: 1.7 }}
               />
-              <span className="relative z-10 px-1 text-3xl md:text-5xl"> partnership</span>
+              <span className="relative z-10 px-1 text-3xl md:text-5xl"> {t("partnershipWord")} </span>
             </motion.span>
           </span>
         </motion.h1>
@@ -91,7 +93,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            At Hestia Labs, we believe that our success is rooted in strong partnerships with our clients. We work hand in hand to bring their ideas to life, placing collaboration, creativity, and technology at the heart of everything we do.
+            {t("paragraph1")}
           </motion.p>
           
           <motion.p
@@ -100,7 +102,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
           >
-            Hestia Labs was built on the desire to do things differently. We are committed to creating high-quality software solutions without compromising transparency, integrity, or the innovation that drives us.
+            {t("paragraph2")}
           </motion.p>
           
           <motion.p
@@ -109,7 +111,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.2 }}
           >
-            At Hestia Labs, we're more than just a team — we're a family. We value creativity, flexibility, and a supportive work environment, where each member is encouraged to bring their best to every project, while maintaining a healthy balance between personal and professional life.
+            {t("paragraph3")}
           </motion.p>
         </div>
         
@@ -124,7 +126,7 @@ export function HeroSection() {
           }}
         >
           <div className="flex flex-col items-center">
-            <span className="font-bellefair text-sm uppercase mb-2">Scroll Down</span>
+            <span className="font-bellefair text-sm uppercase mb-2">{t("scrollDown")}</span>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>

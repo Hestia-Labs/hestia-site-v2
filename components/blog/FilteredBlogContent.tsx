@@ -5,17 +5,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { BlogPost } from '@/types/blog';
 import MasonryGrid from './MasonryGrid';
 import FilterTabs from './FilterTabs';
+import { useTranslations } from 'next-intl';
 
 interface FilteredBlogContentProps {
   posts: BlogPost[];
   categories: Record<string, number>;
+  filterIdMap?: Record<string, string>;
 }
 
-export default function FilteredBlogContent({ posts, categories }: FilteredBlogContentProps) {
+export default function FilteredBlogContent({ posts, categories, filterIdMap }: FilteredBlogContentProps) {
+  const t = useTranslations('BlogPage.filters');
   const [activeFilter, setActiveFilter] = useState('all');
 
   // Handle filter changes with a slight delay for animation
   const handleFilterChange = (filter: string) => {
+    console.log('FilteredBlogContent - Setting active filter:', filter);
     setActiveFilter(filter);
   };
 
@@ -27,7 +31,7 @@ export default function FilteredBlogContent({ posts, categories }: FilteredBlogC
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        Explore More
+        {t('title')}
       </motion.h2>
       
       <FilterTabs 
@@ -45,7 +49,11 @@ export default function FilteredBlogContent({ posts, categories }: FilteredBlogC
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
         >
-          <MasonryGrid posts={posts} filter={activeFilter} />
+          <MasonryGrid 
+            posts={posts} 
+            filter={activeFilter} 
+            filterIdMap={filterIdMap}
+          />
         </motion.div>
       </AnimatePresence>
     </>

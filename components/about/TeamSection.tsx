@@ -2,16 +2,19 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function TeamSection() {
+  const t = useTranslations("AboutPage.teamSection");
+  
   return (
     <section className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
-        <h2 className="font-bellefair text-4xl md:text-5xl uppercase mb-16 text-center">Our Team</h2>
+        <h2 className="font-bellefair text-4xl md:text-5xl uppercase mb-16 text-center">{t("title")}</h2>
         
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="font-avenirNext text-lg">
-            Our diverse team of passionate professionals brings together expertise across design, development, and strategy to create exceptional digital experiences.
+            {t("description")}
           </p>
         </div>
         
@@ -27,8 +30,8 @@ export function TeamSection() {
               viewport={{ once: true, margin: "-50px" }}
             >
               <div className="w-40 h-40 mx-auto mb-4 rounded-full bg-gray-200"></div>
-              <h3 className="font-bellefair text-xl uppercase text-center">Team Member</h3>
-              <p className="text-center text-sm text-gray-600 font-avenirNext">Position</p>
+              <h3 className="font-bellefair text-xl uppercase text-center">{t("teamMember")}</h3>
+              <p className="text-center text-sm text-gray-600 font-avenirNext">{t("position")}</p>
             </motion.div>
           ))}
         </div>

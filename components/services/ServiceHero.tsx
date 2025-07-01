@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 interface ServiceHeroProps {
   title: string;
@@ -91,9 +92,112 @@ const ServiceSvgPattern = ({ serviceId }: { serviceId: string }) => {
   }
   
   // Digital Marketing pattern - network nodes
-  if (serviceId === 'digital-marketing') {
+  if (serviceId === 'brand-creation') {
     return (
       <svg viewBox="0 0 200 200" className="w-full h-full">
+      <motion.g
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        stroke="currentColor"
+        strokeWidth="1"
+        fill="none"
+        className="text-primary/20"
+      >
+        <motion.circle 
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          cx="100" cy="100" r="70" 
+        />
+        <motion.circle 
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          cx="100" cy="100" r="50" 
+        />
+        <motion.circle 
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          cx="100" cy="100" r="30" 
+        />
+      </motion.g>
+    </svg>
+    );
+  }
+  
+  // UX Design pattern - flowing circles and curved lines
+  if (serviceId === 'ux-ui-design') {
+    return (
+      <svg viewBox="0 0 200 200" className="w-full h-full">
+        <motion.g
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+          stroke="currentColor"
+          strokeWidth="1"
+          fill="none"
+          className="text-primary/20"
+        >
+          {/* Curved flow paths */}
+          <motion.path
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 2, delay: 0.3 }}
+            d="M40,100 C40,60 80,60 100,40 C120,60 160,60 160,100 C160,140 120,140 100,160 C80,140 40,140 40,100"
+          />
+          <motion.path
+            initial={{ pathLength: 0 }}
+            animate={{ pathLength: 1 }}
+            transition={{ duration: 2, delay: 0.6 }}
+            d="M60,100 C60,75 80,75 100,60 C120,75 140,75 140,100 C140,125 120,125 100,140 C80,125 60,125 60,100"
+          />
+          
+          {/* Circles representing touchpoints */}
+          <motion.circle 
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.9 }}
+            cx="100" cy="40" r="6" 
+            className="text-primary/20" fill="currentColor"
+          />
+          <motion.circle 
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            cx="160" cy="100" r="6" 
+            className="text-primary/20" fill="currentColor"
+          />
+          <motion.circle 
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.1 }}
+            cx="100" cy="160" r="6" 
+            className="text-primary/20" fill="currentColor"
+          />
+          <motion.circle 
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.2 }}
+            cx="40" cy="100" r="6" 
+            className="text-primary/20" fill="currentColor"
+          />
+          <motion.circle 
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5, delay: 1.3 }}
+            cx="100" cy="100" r="10" 
+            className="text-primary/30" fill="currentColor"
+          />
+        </motion.g>
+      </svg>
+    );
+  }
+  
+  // Default pattern with basic geometric shapes
+  return (
+    <svg viewBox="0 0 200 200" className="w-full h-full">
         <motion.g
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -179,117 +283,16 @@ const ServiceSvgPattern = ({ serviceId }: { serviceId: string }) => {
           />
         </motion.g>
       </svg>
-    );
-  }
-  
-  // UX Design pattern - flowing circles and curved lines
-  if (serviceId === 'ux-design') {
-    return (
-      <svg viewBox="0 0 200 200" className="w-full h-full">
-        <motion.g
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, ease: "easeInOut" }}
-          stroke="currentColor"
-          strokeWidth="1"
-          fill="none"
-          className="text-primary/20"
-        >
-          {/* Curved flow paths */}
-          <motion.path
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 2, delay: 0.3 }}
-            d="M40,100 C40,60 80,60 100,40 C120,60 160,60 160,100 C160,140 120,140 100,160 C80,140 40,140 40,100"
-          />
-          <motion.path
-            initial={{ pathLength: 0 }}
-            animate={{ pathLength: 1 }}
-            transition={{ duration: 2, delay: 0.6 }}
-            d="M60,100 C60,75 80,75 100,60 C120,75 140,75 140,100 C140,125 120,125 100,140 C80,125 60,125 60,100"
-          />
-          
-          {/* Circles representing touchpoints */}
-          <motion.circle 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.9 }}
-            cx="100" cy="40" r="6" 
-            className="text-primary/20" fill="currentColor"
-          />
-          <motion.circle 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 1 }}
-            cx="160" cy="100" r="6" 
-            className="text-primary/20" fill="currentColor"
-          />
-          <motion.circle 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 1.1 }}
-            cx="100" cy="160" r="6" 
-            className="text-primary/20" fill="currentColor"
-          />
-          <motion.circle 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 1.2 }}
-            cx="40" cy="100" r="6" 
-            className="text-primary/20" fill="currentColor"
-          />
-          <motion.circle 
-            initial={{ scale: 0 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.5, delay: 1.3 }}
-            cx="100" cy="100" r="10" 
-            className="text-primary/30" fill="currentColor"
-          />
-        </motion.g>
-      </svg>
-    );
-  }
-  
-  // Default pattern with basic geometric shapes
-  return (
-    <svg viewBox="0 0 200 200" className="w-full h-full">
-      <motion.g
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, ease: "easeInOut" }}
-        stroke="currentColor"
-        strokeWidth="1"
-        fill="none"
-        className="text-primary/20"
-      >
-        <motion.circle 
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          cx="100" cy="100" r="70" 
-        />
-        <motion.circle 
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          cx="100" cy="100" r="50" 
-        />
-        <motion.circle 
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          cx="100" cy="100" r="30" 
-        />
-      </motion.g>
-    </svg>
   );
 };
 
 export default function ServiceHero({ title, heading, description, serviceId }: ServiceHeroProps) {
+  const commonT = useTranslations("Common");
+
   return (
     <section className="relative py-36 px-4 md:px-8 bg-background overflow-hidden">
       {/* Grid Background Pattern */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" className="text-foreground">
           <defs>
             <pattern id="grid-pattern" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -330,9 +333,9 @@ export default function ServiceHero({ title, heading, description, serviceId }: 
             >
               <a 
                 href="#contact" 
-                className="inline-block bg-primary/10 border border-primary text-primary font-bellefair uppercase tracking-wider py-3 px-8 transition-colors duration-300 hover:bg-primary hover:text-white"
+                className="inline-block border border-primary text-primary font-bellefair uppercase tracking-wider py-3 px-8 transition-colors duration-300 hover:bg-primary hover:text-white rounded-sm"
               >
-                Discuss Your Project
+                {commonT("discussYourProject")}
               </a>
             </motion.div>
           </motion.div>

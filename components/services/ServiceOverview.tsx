@@ -2,13 +2,14 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import { useTranslations } from 'next-intl';
 interface ServiceOverviewProps {
   fullDescription: string;
   technologies: string[];
 }
 
 export default function ServiceOverview({ fullDescription, technologies }: ServiceOverviewProps) {
+  const commonT = useTranslations("Common");
   return (
     <section className="py-24 px-4 md:px-8 bg-background">
       <div className="container mx-auto max-w-6xl">
@@ -22,7 +23,7 @@ export default function ServiceOverview({ fullDescription, technologies }: Servi
             transition={{ duration: 0.7 }}
           >
             <h2 className="font-bellefair text-3xl md:text-4xl uppercase mb-8 text-foreground">
-              Overview
+              {commonT("overview")}
             </h2>
             
             <div className="prose prose-lg max-w-none text-foreground/80">
@@ -44,7 +45,7 @@ export default function ServiceOverview({ fullDescription, technologies }: Servi
           >
             <div className="bg-foreground/5 p-8 rounded-sm">
               <h3 className="font-bellefair text-2xl uppercase mb-6 text-foreground">
-                Technologies & Expertise
+                {commonT("technologies")} & {commonT("expertise")}
               </h3>
               
               <div className="flex flex-wrap gap-3">

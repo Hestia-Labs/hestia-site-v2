@@ -3,6 +3,7 @@
 import React from 'react';
 import { BlogPost } from '@/types/blog';
 import BlogPostCard from './BlogPostCard';
+import { useTranslations } from 'next-intl';
 
 interface FeaturedPostsProps {
   posts: BlogPost[];
@@ -24,7 +25,36 @@ const featuredPostTypes = [
   },
 ];
 
+// Service categories for posts
+const serviceCategories = {
+  branding: {
+    name: "BRAND CREATION",
+    color: "bg-black text-white border border-white"
+  },
+  software: {
+    name: "SOFTWARE DEVELOPMENT",
+    color: "bg-black text-white border border-white"
+  },
+  uxui: {
+    name: "UX/UI DESIGN",
+    color: "bg-black text-white border border-white"
+  }
+};
+
 export default function FeaturedPosts({ posts }: FeaturedPostsProps) {
+  const t = useTranslations('BlogPage.featured');
+  
+  // For demo purposes, assign categories to posts if they don't have them
+  const postsWithCategories = posts.map((post, index) => {
+    if (!post.serviceCategory) {
+      // Rotate through categories for demo
+      const categories = Object.keys(serviceCategories);
+      const category = categories[index % categories.length];
+      return { ...post, serviceCategory: category };
+    }
+    return post;
+  });
+
   return (
     <div className="relative">
       {/* Subtle background grid pattern */}
@@ -39,28 +69,43 @@ export default function FeaturedPosts({ posts }: FeaturedPostsProps) {
         </svg>
       </div>
       
-      <h2 className="font-bellefair text-2xl md:text-3xl uppercase mb-8 relative z-10">Featured Posts</h2>
+      <div className="relative z-10">
+        <h2 className="font-bellefair text-2xl md:text-3xl uppercase mb-3">{t('title')}</h2>
+        <p className="font-avenirNext text-base text-gray-600 mb-8 max-w-xl">
+          {t('subtitle')}
+        </p>
+      </div>
       
       {/* Desktop layout - staggered heights */}
       <div className="hidden md:flex flex-row gap-8 w-full min-h-[400px] items-start relative z-10 pt-8">
-        {posts.map((post, index) => (
+        {postsWithCategories.map((post, index) => (
           <BlogPostCard 
             key={post.id} 
             post={post} 
             index={index} 
             featured={true}
             featuredTypes={featuredPostTypes}
+            serviceCategory={
+              post.serviceCategory ? 
+                serviceCategories[post.serviceCategory as keyof typeof serviceCategories] : 
+                undefined
+            }
           />
         ))}
       </div>
       
       {/* Mobile layout - single column */}
       <div className="grid grid-cols-2 gap-8 md:hidden relative z-10">
-        {posts.map((post, index) => (
+        {postsWithCategories.map((post, index) => (
           <BlogPostCard 
             key={post.id} 
             post={post} 
             index={index}
+            serviceCategory={
+              post.serviceCategory ? 
+                serviceCategories[post.serviceCategory as keyof typeof serviceCategories] : 
+                undefined
+            }
           />
         ))}
       </div>

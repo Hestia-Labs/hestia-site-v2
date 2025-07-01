@@ -2,31 +2,41 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
+import TransitionLink from "@/components/TransitionLink";
+import { useTranslations } from "next-intl";
 
-// Define services data
-const services = [
-  {
-    id: "software-development",
-    title: "Software Development",
-    description: "Custom software solutions built with modern technologies for web, mobile, and desktop.",
-    path: "/services/software-development",
-  },
-  {
-    id: "digital-marketing",
-    title: "Digital Marketing",
-    description: "Strategic campaigns to grow your online presence and reach.",
-    path: "/services/digital-marketing",
-  },
-  {
-    id: "ux-design",
-    title: "UX Design",
-    description: "User-centered design to create intuitive and engaging experiences.",
-    path: "/services/ux-design",
-  }
-];
+interface Service {
+  id: string;
+  title: string;
+  description: string;
+  path: string;
+}
 
 export function ServicesListSection() {
+  const t = useTranslations("ServicesPage.servicesList");
+  
+  // Define services data
+  const services: Service[] = [
+    {
+      id: "software-development",
+      title: t("softwareDevelopment.title"),
+      description: t("softwareDevelopment.description"),
+      path: "/services/software-development",
+    },
+    {
+      id: "digital-marketing",
+      title: t("digitalMarketing.title"),
+      description: t("digitalMarketing.description"),
+      path: "/services/digital-marketing",
+    },
+    {
+      id: "ux-design",
+      title: t("uxDesign.title"),
+      description: t("uxDesign.description"),
+      path: "/services/ux-design",
+    }
+  ];
+
   return (
     <motion.div 
       className="w-full"
@@ -48,10 +58,10 @@ export function ServicesListSection() {
   );
 }
 
-function ServiceItem({ service, index }: { service: any, index: number }) {
+function ServiceItem({ service, index }: { service: Service, index: number }) {
   return (
     <div className="border-t border-gray-200 pt-5">
-      <Link 
+      <TransitionLink 
         href={service.path} 
         className="group block"
       >
@@ -65,7 +75,7 @@ function ServiceItem({ service, index }: { service: any, index: number }) {
             <p className="font-avenirNext text-gray-600">{service.description}</p>
           </div>
         </div>
-      </Link>
+      </TransitionLink>
     </div>
   );
 }
@@ -135,4 +145,4 @@ function ServiceIcon({ index }: { index: number }) {
   ];
 
   return icons[index];
-} 
+}

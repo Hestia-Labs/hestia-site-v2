@@ -1,8 +1,13 @@
 import { ServicesSection } from "@/components/services/ServicesSection";
 import { ServicesListSection } from "@/components/services/ServicesListSection";
 import { ProcessSection } from "@/components/services/ProcessSection";
+import { getTranslations } from "next-intl/server";
 
-export default function ServicesPage() {
+export const runtime = "edge";
+
+export default async function ServicesPage() {
+  const t = await getTranslations("ServicesPage");
+  
   return (
     <div className="min-h-screen pt-24">
       {/* Simplified hero header section */}
@@ -21,9 +26,9 @@ export default function ServicesPage() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="font-bellefair text-5xl md:text-6xl uppercase">Our Services</h1>
+            <h1 className="font-bellefair text-5xl md:text-6xl uppercase">{t("pageTitle")}</h1>
             <p className="font-avenirNext text-gray-600 max-w-2xl mx-auto mt-6">
-              We deliver exceptional solutions tailored to your business needs.
+              {t("pageSubtitle")}
             </p>
           </div>
         </div>
@@ -34,12 +39,12 @@ export default function ServicesPage() {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div className="lg:order-1">
-              <h2 className="font-bellefair text-2xl uppercase mb-6">About Our Services</h2>
+              <h2 className="font-bellefair text-2xl uppercase mb-6">{t("aboutServicesTitle")}</h2>
               <ServicesSection />
             </div>
             
             <div className="lg:order-2">
-              <h2 className="font-bellefair text-2xl uppercase mb-6">Our Expertise</h2>
+              <h2 className="font-bellefair text-2xl uppercase mb-6">{t("expertiseTitle")}</h2>
               <ServicesListSection />
             </div>
           </div>

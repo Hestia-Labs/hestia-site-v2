@@ -3,29 +3,27 @@ import { Separator } from "@/components/ui/separator";
 import ContactForm from '@/components/contact/ContactForm';
 import ContactOptions from '@/components/contact/ContactOptions';
 import AnimatedWrapper from '@/components/contact/AnimatedWrapper';
+import { getTranslations } from 'next-intl/server';
+import { PageProps } from '@/.next/types/app/[locale]/contact/page';
+export const runtime = "edge";
 
-// Define contact options
-const contactOptions = [
-  {
-    id: "careers",
-    title: "Careers",
-    email: "careers@hestialabs.io",
-    description: "Join our amazing team"
-  },
-  {
-    id: "press",
-    title: "Press",
-    email: "press@hestialabs.io",
-    description: "Get in touch for media inquiries"
-  }
-];
 
-export const metadata = {
-  title: 'Contact Us | Hestia Labs',
-  description: 'Get in touch with the Hestia Labs team for business inquiries, careers, or press.',
+export async function generateMetadata({ params }: PageProps) {
+  const locale = await params;
+  const t = await getTranslations({ locale: locale.locale, namespace: 'ContactPage.metadata' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
 }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+  const t = await getTranslations('ContactPage');
+  
+  // Get translated contact options from translation file
+  const contactOptions = t.raw('contactOptions');
+  
   return (
     <div className="flex min-h-screen w-full flex-col bg-white">
       <div className="w-full px-8 pt-20 relative">
@@ -44,10 +42,10 @@ export default function ContactPage() {
         <AnimatedWrapper>
           <div className="mx-auto max-w-7xl mt-20 relative z-10">
             <h1 className="font-bellefair mb-4 text-6xl lg:text-7xl uppercase">
-              Let's talk
+              {t('heading')}
             </h1>
             <p className="font-avenirNext mb-12 text-2xl lg:text-3xl text-gray-700">
-              We can't wait to hear from you
+              {t('subheading')}
             </p>
             
             <ContactOptions options={contactOptions} />
@@ -64,13 +62,11 @@ export default function ContactPage() {
       <div className="mt-24 py-12 bg-black text-white">
         <div className="mx-auto max-w-7xl px-8">
           <p className="font-bellefair text-xl text-center">
-            Hestia Labs — Creating exceptional digital experiences
+            {t('footer')}
           </p>
         </div>
       </div>
     </div>
   );
 }
-
-
 

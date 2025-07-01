@@ -3,8 +3,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function CallToAction() {
+  const commonT = useTranslations("Common");
   return (
     <section id="contact" className="py-28 px-4 md:px-8 bg-black relative overflow-hidden">
       {/* Background patterns */}
@@ -27,12 +29,12 @@ export default function CallToAction() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <h2 className="font-bellefair text-3xl md:text-5xl text-white uppercase mb-6 leading-tight">
-            Ready to Start Your Project?
+          <h2 className="font-bellefair text-3xl md:text-5xl text-white uppercase mb-6 leading-tight ">
+            {commonT("readyToStartYourProject")}
           </h2>
           
           <p className="font-avenirNext text-lg text-white/90 max-w-2xl mx-auto mb-12">
-            Let's discuss how we can help you achieve your business goals with our tailored solutions.
+            {commonT("letUsDiscussHowWeCanHelpYouAchieveYourBusinessGoals")}
           </p>
           
           <motion.div
@@ -47,9 +49,9 @@ export default function CallToAction() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
-                className="bg-primary hover:bg-primary/90 text-white font-bellefair uppercase tracking-wider py-4 px-10 transition-colors duration-300 text-center"
+                className="bg-primary hover:bg-primary/90 text-white font-bellefair uppercase tracking-wider py-4 px-10 transition-colors duration-300 text-center rounded-sm"
               >
-                Contact Us
+                {commonT("contactUs")}
               </motion.div>
             </Link>
             
@@ -58,9 +60,9 @@ export default function CallToAction() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
-                className="border border-white/30 hover:border-white text-white font-bellefair uppercase tracking-wider py-4 px-10 transition-colors duration-300 text-center"
+                className="border border-white/30 hover:border-white text-white font-bellefair uppercase tracking-wider py-4 px-10 transition-colors duration-300 text-center rounded-sm    "
               >
-                Explore Our Work
+                {commonT("exploreOurWork")}
               </motion.div>
             </Link>
           </motion.div>

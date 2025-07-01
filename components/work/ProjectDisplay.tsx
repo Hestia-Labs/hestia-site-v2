@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Project } from '@/types/project';
 
 interface ProjectDisplayProps {
@@ -31,10 +32,12 @@ export default function ProjectDisplay({ project, index }: ProjectDisplayProps) 
         >
           <Link href={project.href}>
             <div className="relative aspect-[16/9] group cursor-pointer">
-              <img 
-                src={project.image} 
-                alt={project.name} 
-                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 grayscale-[30%]"
+              <Image
+                src={project.image}
+                alt={project.name}
+                fill
+                sizes="(max-width: 768px) 100vw, 58vw"
+                className="object-cover transition-all duration-500 group-hover:scale-105 group-hover:grayscale-0 grayscale-[30%]"
               />
               
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">

@@ -2,8 +2,15 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function ValuesPhilosophy() {
+  const t = useTranslations("AboutPage.valuesPhilosophy");
+  const values = t.raw("values") as Array<{
+    number: string;
+    text: string;
+  }>;
+  
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
@@ -15,7 +22,7 @@ export function ValuesPhilosophy() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Fostering innovation while prioritizing balance.
+            {t("title")}
           </motion.h2>
           
           <motion.p 
@@ -25,30 +32,29 @@ export function ValuesPhilosophy() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            At Hestia Labs, we believe that our strength comes from a team that is inspired and balanced. 
-            We share a passion for technology, creativity, and building a supportive work environment.
+            {t("subtitle")}
           </motion.p>
         </div>
         
         <div className="space-y-32">
           {/* Values items with optimized animations */}
           <ValuesItem 
-            number="01"
-            text="Our team members stay with us because they're empowered to grow and innovate without limits."
+            number={values[0].number}
+            text={values[0].text}
             svgComponent={<ValuesItemSVG1 />}
             alignment="left"
           />
           
           <ValuesItem 
-            number="02"
-            text="We trust our team to manage their time effectively, ensuring a healthy balance between productivity and life outside work."
+            number={values[1].number}
+            text={values[1].text}
             svgComponent={<ValuesItemSVG2 />}
             alignment="right"
           />
           
           <ValuesItem 
-            number="03"
-            text="We recognize that everyone has a life outside the office, and we're committed to providing a supportive environment for personal and professional growth."
+            number={values[2].number}
+            text={values[2].text}
             svgComponent={<ValuesItemSVG3 />}
             alignment="left"
           />

@@ -4,7 +4,11 @@ import { ValuesPhilosophy } from "@/components/about/ValuesPhilosophy";
 import { TeamSection } from "@/components/about/TeamSection";
 import { JoinUsCTA } from "@/components/about/JoinUsCTA";
 
-export default function AboutPage() {
+
+export const runtime = "edge";
+
+export default async function AboutPage() {
+  
   return (
     <div className="min-h-screen">
       <HeroSection />

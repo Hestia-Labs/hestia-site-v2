@@ -7,17 +7,23 @@ import ServiceBenefits from '@/components/services/ServiceBenefits';
 import ServiceProcess from '@/components/services/ServiceProcess';
 import FeaturedCaseStudy from '@/components/services/FeaturedCaseStudy';
 import CallToAction from '@/components/services/CallToAction';
+import { PageProps } from '@/.next/types/app/[locale]/services/[service]/page';
+import { Metadata } from 'next';
 
-interface ServicePageProps {
-  params: {
-    service: string;
-  };
-}
+export const runtime = "edge";
 
+type Props = PageProps;
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  if (!params) {
+    return {
+      title: 'Service Not Found | Hestia Labs',
+      description: 'The requested service could not be found.',
+    };
+  }
 
-export async function generateMetadata({ params }: ServicePageProps) {
   const serviceId = await params;
+
   const service = services.find(s => s.id === serviceId.service);
   
   if (!service) {
@@ -33,8 +39,13 @@ export async function generateMetadata({ params }: ServicePageProps) {
   };
 }
 
-export default async function ServicePage({ params }: ServicePageProps) {
+export default async function ServicePage({ params }: Props) {
+  if (!params) {
+    notFound();
+  }
+
   const serviceId = await params;
+  
   const service = services.find(s => s.id === serviceId.service);
   
   if (!service) {

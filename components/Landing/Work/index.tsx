@@ -4,41 +4,11 @@ import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-
-const projects = [
-  {
-    id: 1,
-    name: 'CR VINOS',
-    category: 'Food & Wine',
-    type: 'E-Commerce',
-    tagline: 'Revolutionizing Online Wine Experiences',
-    image: '/img/crvinos_homepage.png',
-    href: '/work/crvinos'
-  },
-  {
-    id: 2,
-    name: 'Project Two',
-    category: 'Fashion',
-    type: 'Branding',
-    tagline: 'Redefining Modern Fashion Identity',
-    image: 'https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/154443660/original/734570cec0de955789ff0acd80caad3d582b85e0/create-a-generative-art-piece-for-you.png',
-    href: '#'
-  },
-  {
-    id: 3,
-    name: 'Project Three',
-    category: 'Art & Design',
-    type: 'Portfolio',
-    tagline: 'Showcasing Digital Art Innovation',
-    image: 'https://cdn.pixabay.com/photo/2018/09/04/09/12/generative-art-3653275_1280.jpg',
-    href: '#'
-  },
-]
+import { projects } from '@/data/projects'
 
 type AnimationDirection = 'left' | 'right' | 'top' | 'bottom';
 
 interface WorkCarouselProps {
-  alignment?: 'left' | 'right';
   stopCarousel?: boolean;
   variant?: 'fullscreen' | 'split' | 'compact';
   projectIndex?: number;
@@ -47,7 +17,6 @@ interface WorkCarouselProps {
 }
 
 export default function WorkCarousel({ 
-  alignment = 'left', 
   stopCarousel = false, 
   variant = 'fullscreen',
   projectIndex = 0,
@@ -151,23 +120,6 @@ export default function WorkCarousel({
         };
     }
   };
-
-  // Convenience preset animations
-  const fadeInFromLeft = getAnimationProps('left');
-  const fadeInFromRight = getAnimationProps('right');
-  const fadeInFromTop = getAnimationProps('top');
-  const fadeInFromBottom = getAnimationProps('bottom');
-
-  // Common button component for consistency
-  const ViewButton = () => (
-    <Link href={projects[activeIndex].href}>
-      <Button 
-        className='bg-background text-popover hover:bg-background/70 transition-colors mt-6'
-      >
-        View Case Study
-      </Button>
-    </Link>
-  );
   
   // Render different layouts based on variant
   if (variant === 'split') {

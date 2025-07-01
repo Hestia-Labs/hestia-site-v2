@@ -36,41 +36,78 @@ const AnimatedLogo: React.FC<LogoProps> = ({
         className="relative z-10 w-full h-full"
       >
         <defs>
-          <linearGradient
-            id="shine-gradient"
+          {/* Simple, clean accent color for outlines */}
+          <linearGradient 
+            id="outline-gradient" 
             gradientUnits="objectBoundingBox"
-            x1="0"
-            y1="0"
-            x2="1"
+            x1="0" 
+            y1="1" 
+            x2="1" 
             y2="0"
           >
-            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0" />
-            <stop offset="40%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
-            <stop offset="60%" stopColor="hsl(var(--primary))" stopOpacity="0.8" />
-            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0" />
+            <stop offset="0%" stopColor="hsl(var(--primary))" />
+            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.5" />
           </linearGradient>
         </defs>
 
         <g transform={transformValue}>
           {polygons.map((points, i) => (
             <motion.g key={i} initial="rest" whileHover="hover">
+              {/* Base shape with subtle transition */}
               <motion.polygon
                 points={points}
                 fill="hsl(var(--secondary))"
                 variants={{
-                  rest: { opacity: 1 },
-                  hover: { opacity: 0, transition: { duration: 0.2, ease: "linear" } },
+                  rest: { 
+                    fill: "hsl(var(--secondary))",
+                    y: 0 
+                  },
+                  hover: { 
+                    fill: "hsl(var(--secondary))",
+                    transition: { duration: 0.3, ease: "easeOut" } 
+                  },
                 }}
               />
+              
+              {/* Clean outline that appears on hover */}
               <motion.polygon
                 points={points}
-                fill="url(#shine-gradient)"
+                fill="none"
+                stroke="url(#outline-gradient)"
+                strokeWidth="1"
                 variants={{
-                  rest: { opacity: 0, filter: "drop-shadow(0 0 0px transparent)" },
-                  hover: {
-                    opacity: 1,
-                    filter: "drop-shadow(0 0 8px hsla(var(--primary),0.5))",
-                    transition: { duration: 0.2, ease: "linear" },
+                  rest: { 
+                    opacity: 0, 
+                    pathLength: 0,
+                    strokeWidth: "0.5"
+                  },
+                  hover: { 
+                    opacity: 1, 
+                    pathLength: 1,
+                    strokeWidth: "0.5",
+                    transition: { 
+                      pathLength: { duration: 0.6, ease: "easeOut" },
+                      opacity: { duration: 0.2 },
+                      strokeWidth: { duration: 0.3, delay: 0.1 }
+                    }
+                  },
+                }}
+              />
+              
+              {/* Subtle accent in the corners that appears on hover */}
+              <motion.polygon
+                points={points}
+                fill="hsl(var(--primary))"
+                variants={{
+                  rest: { 
+                    opacity: 0,
+                  },
+                  hover: { 
+                    opacity: 0.15,
+                    transition: { 
+                      opacity: { duration: 0.5, ease: "easeOut" },
+                      scale: { duration: 0.4, ease: [0.19, 1, 0.22, 1] }
+                    }
                   },
                 }}
               />

@@ -4,14 +4,14 @@ import { Project } from '@/types/project';
 export const projects: Project[] = [
   {
     id: 1,
-    name: "CR VINOS",
-    category: "Food & Wine",
-    type: "E-Commerce",
-    description: "A premium wine e-commerce platform with a focus on user experience and seamless checkout process.",
-    tagline: "Revolutionizing Online Wine Experiences",
-    image: "/img/crvinos_homepage.png",
-    year: "2023",
-    href: "/work/crvinos"
+    name: "NOVA TECH",
+    category: "Technology",
+    type: "SaaS Platform",
+    description: "A cutting-edge cloud computing platform offering scalable solutions for enterprise businesses.",
+    tagline: "The Future of Cloud Computing",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1080",
+    year: "2023", 
+    href: "/work/nova-tech"
   },
   {
     id: 2,

@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     id: "software-development",
     title: "Software Development",
-    heading: "Custom Software Solutions",
+    heading: "Custom Software Solutions", 
     description: "Custom software solutions built with modern technologies for web, mobile, and desktop.",
     fullDescription: `We create bespoke software solutions tailored to your specific business needs. Our development team excels in building scalable, robust applications using cutting-edge technologies and best practices.
 
@@ -13,7 +13,7 @@ Our approach combines technical excellence with a deep understanding of your bus
     technologies: ["React", "Next.js", "Node.js", "Python", "Cloud Infrastructure", "DevOps"],
     benefits: [
       "Tailored solutions that address your specific business challenges",
-      "Scalable architecture that grows with your business",
+      "Scalable architecture that grows with your business", 
       "Modern, intuitive user interfaces",
       "Robust backend systems with high performance",
       "Comprehensive testing and quality assurance"
@@ -30,45 +30,13 @@ Our approach combines technical excellence with a deep understanding of your bus
     featuredCaseStudy: {
       title: "CR VINOS",
       description: "A premium e-commerce platform with a focus on user experience and seamless checkout process.",
-      image: "/img/crvinos_homepage.png",
+      image: "/img/crvinos_homepage.png", 
       link: "/work/crvinos"
     }
   },
   {
-    id: "digital-marketing",
-    title: "Digital Marketing",
-    heading: "Strategic Growth Marketing",
-    description: "Strategic campaigns to grow your online presence and reach.",
-    fullDescription: `We design and execute data-driven digital marketing strategies that connect your brand with the right audience. Our holistic approach encompasses all digital channels, ensuring your marketing efforts generate measurable results.
-
-By combining creative excellence with analytical precision, we create campaigns that not only capture attention but also drive conversions and build lasting relationships with your customers.`,
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
-    technologies: ["SEO", "SEM", "Content Marketing", "Email Marketing", "Social Media", "Analytics"],
-    benefits: [
-      "Increased brand visibility and awareness",
-      "Higher quality traffic to your digital platforms",
-      "Improved conversion rates and lead generation",
-      "Data-driven insights for continuous optimization",
-      "Consistent messaging across all channels"
-    ],
-    processSteps: [
-      { name: "Audit", description: "Comprehensive analysis of your current digital presence" },
-      { name: "Strategy", description: "Customized marketing plan aligned with your business objectives" },
-      { name: "Content Creation", description: "Compelling content that resonates with your target audience" },
-      { name: "Channel Activation", description: "Strategic deployment across relevant platforms" },
-      { name: "Optimization", description: "Continuous refinement based on performance data" },
-      { name: "Reporting", description: "Transparent metrics and insights on campaign performance" }
-    ],
-    featuredCaseStudy: {
-      title: "ARTIS",
-      description: "Complete brand identity redesign for a luxury fashion house, including digital presence and e-commerce integration.",
-      image: "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?q=80&w=2070",
-      link: "/work/artis"
-    }
-  },
-  {
-    id: "ux-design",
-    title: "UX Design",
+    id: "ux-ui-design",
+    title: "UX/UI Design",
     heading: "Human-Centered Design Solutions",
     description: "User-centered design to create intuitive and engaging experiences.",
     fullDescription: `We craft exceptional user experiences that delight your customers and achieve your business goals. Our design process places real users at the center, ensuring that every touchpoint in your digital product is intuitive, accessible, and engaging.
@@ -79,7 +47,7 @@ By combining research, strategy, and creative design, we create digital experien
     benefits: [
       "Improved user satisfaction and engagement",
       "Reduced development costs through early problem identification",
-      "Higher conversion rates and customer retention",
+      "Higher conversion rates and customer retention", 
       "Differentiation from competitors through exceptional experiences",
       "Accessible design that reaches all potential users"
     ],
@@ -97,6 +65,39 @@ By combining research, strategy, and creative design, we create digital experien
       description: "An intuitive real estate platform offering seamless property search and viewing experiences.",
       image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070",
       link: "/work/horizon"
+    }
+  },
+  {
+    id: "brand-creation",
+    title: "Brand Creation",
+    heading: "Strategic Brand Development",
+    description: "Strategic branding to establish a strong and memorable identity for your business.",
+    fullDescription: `We help businesses build powerful brand identities that resonate with their target audience and stand out in crowded markets. Our comprehensive branding process encompasses everything from visual identity to brand voice and positioning.
+
+Through strategic thinking and creative excellence, we create brands that tell compelling stories, build emotional connections, and drive business growth.`,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015",
+    technologies: ["Brand Strategy", "Visual Identity", "Brand Guidelines", "Marketing Collateral", "Digital Assets", "Brand Voice"],
+    benefits: [
+      "Distinctive brand identity that sets you apart",
+      "Consistent brand experience across all touchpoints",
+      "Stronger market positioning and recognition",
+      "Enhanced customer trust and loyalty",
+      "Clear brand guidelines for future growth"
+    ],
+    processSteps: [
+      { name: "Discovery", description: "Understanding your vision, values, and market position" },
+      { name: "Research", description: "Market analysis and target audience insights" },
+      { name: "Strategy", description: "Brand positioning and messaging framework" },
+      { name: "Identity Design", description: "Visual elements and brand voice development" },
+      { name: "Guidelines", description: "Comprehensive brand usage documentation" },
+      { name: "Implementation", description: "Brand rollout across all touchpoints" },
+      { name: "Evolution", description: "Ongoing brand management and refinement" }
+    ],
+    featuredCaseStudy: {
+      title: "ARTIS",
+      description: "Complete brand identity redesign for a luxury fashion house, including digital presence and e-commerce integration.",
+      image: "https://images.unsplash.com/photo-1525328437458-0c4d4db7cab4?q=80&w=2070",
+      link: "/work/artis"
     }
   }
 ]; 

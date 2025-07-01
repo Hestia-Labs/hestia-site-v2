@@ -3,12 +3,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ProcessStep } from '@/types/service';
-
+import { useTranslations } from 'next-intl';
 interface ServiceProcessProps {
   processSteps: ProcessStep[];
 }
 
 export default function ServiceProcess({ processSteps }: ServiceProcessProps) {
+  const commonT = useTranslations("Common");
   return (
     <section className="py-24 px-4 md:px-8 bg-background">
       <div className="container mx-auto max-w-5xl">
@@ -20,10 +21,10 @@ export default function ServiceProcess({ processSteps }: ServiceProcessProps) {
           className="text-center mb-20"
         >
           <h2 className="font-bellefair text-3xl md:text-4xl uppercase mb-4 text-foreground">
-            Our Process
+            {commonT("ourProcess")}
           </h2>
           <p className="font-avenirNext text-lg text-foreground/80 max-w-2xl mx-auto">
-            A methodical approach to deliver exceptional results.
+            {commonT("methodicalApproach")}
           </p>
         </motion.div>
         

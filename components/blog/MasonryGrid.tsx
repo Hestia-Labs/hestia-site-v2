@@ -3,32 +3,48 @@
 import React from 'react';
 import { BlogPost } from '@/types/blog';
 import BlogPostCard from './BlogPostCard';
+import { useTranslations } from 'next-intl';
 
 interface MasonryGridProps {
   posts: BlogPost[];
   filter?: string;
+  filterIdMap?: Record<string, string>;
 }
 
 export default function MasonryGrid({ posts, filter = 'all' }: MasonryGridProps) {
+  const t = useTranslations('BlogPage.filters');
+  
+  // Debug: log the filter value
+  console.log('MasonryGrid - Current filter:', filter);
+  console.log('MasonryGrid - Posts before filtering:', posts.length);
+  
   // Filter posts based on filter value
   const filteredPosts = React.useMemo(() => {
     if (filter === 'all') return posts;
     
-    return posts.filter(post => {
-      if (filter === 'ux-ui' && post.category === 'UX/UI') return true;
+    const filtered = posts.filter(post => {
+      // Filter based on standardized filter IDs
       
-      if (filter === 'branding' && 
-          (post.category === 'Branding' || post.category === 'Fashion')) 
-        return true;
+      if (filter === 'ux-ui') {
+        return post.category === 'UX/UI';
+      }
       
-      if (filter === 'development' && 
-          (post.category === 'Development' || 
-           post.type === 'Web App' || 
-           post.type === 'Platform')) 
-        return true;
+      if (filter === 'branding') {
+        return post.category === 'Branding' || post.category === 'Fashion';
+      }
+      
+      if (filter === 'development') {
+        return post.category === 'Development' || 
+               post.type === 'Web App' || 
+               post.type === 'Platform';
+      }
       
       return false;
     });
+    
+    // Debug the filtered posts
+    console.log('MasonryGrid - Posts after filtering:', filtered.length);
+    return filtered;
   }, [posts, filter]);
 
   // Create specific patterns to ensure a visually appealing masonry layout
@@ -59,7 +75,7 @@ export default function MasonryGrid({ posts, filter = 'all' }: MasonryGridProps)
     </div>
   ) : (
     <div className="text-center py-12">
-      <p className="font-avenirNext text-gray-500">No posts found for this category.</p>
+      <p className="font-avenirNext text-gray-500">{t('noResults')}</p>
     </div>
   );
 } 

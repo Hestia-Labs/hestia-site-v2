@@ -2,12 +2,13 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import { useTranslations } from 'next-intl';
 interface ServiceBenefitsProps {
   benefits: string[];
 }
 
 export default function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
+  const commonT = useTranslations("Common");
   return (
     <section className="py-24 px-4 md:px-8 bg-foreground/5">
       <div className="container mx-auto max-w-6xl">
@@ -19,10 +20,10 @@ export default function ServiceBenefits({ benefits }: ServiceBenefitsProps) {
           className="text-center mb-16"
         >
           <h2 className="font-bellefair text-3xl md:text-4xl uppercase mb-4 text-foreground">
-            Key Benefits
+            {commonT("keyBenefits")}
           </h2>
           <p className="font-avenirNext text-lg text-foreground/80 max-w-2xl mx-auto">
-            We deliver solutions that drive tangible results for your business.
+            {commonT("weDeliverSolutions")}
           </p>
         </motion.div>
         
