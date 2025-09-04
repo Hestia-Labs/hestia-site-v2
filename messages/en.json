@@ -361,6 +361,203 @@
       "description": "We are always looking for talented individuals who are passionate about creating innovative solutions.",
       "buttonText": "Contact Us"
     }
+  },
+  "CleaningServices": {
+    "hero": {
+      "title": "POST-CONSTRUCTION CLEANING SERVICES",
+      "subtitle": "Precision cleaning for flawless project handovers.",
+      "description": "Comprehensive, safety-compliant cleaning solutions designed for construction and renovation sites. Our trained crews deliver spotless, inspection-ready spaces — on time, every time.",
+      "stats": {
+        "mobilization": "48 HR",
+        "safety": "OSHA",
+        "inspection": "100%"
+      },
+      "ctaText": "REQUEST AVAILABILITY",
+      "downloadText": "DOWNLOAD SERVICE SHEET"
+    },
+    "overview": {
+      "title": "OVERVIEW",
+      "description": "We provide full-spectrum post-construction cleaning services, including debris removal, surface detailing, and dust control, to prepare your site for client turnover or occupancy. Our crews are OSHA-trained, fully insured, and equipped with industrial-grade cleaning systems. From commercial builds to luxury residences, we ensure every surface — from floors to fixtures — meets the highest standard of cleanliness.",
+      "coverage": {
+        "area1": "Greater Houston Area",
+        "area2": "East Texas",
+        "area3": "South Texas"
+      },
+      "highlights": {
+        "h1": {
+          "title": "OSHA-Compliant Safety Practices",
+          "description": "Industry Standards"
+        },
+        "h2": {
+          "title": "Rapid Mobilization",
+          "description": "48 Hours"
+        },
+        "h3": {
+          "title": "Dust-Free Guarantee",
+          "description": "Final Inspection Ready"
+        },
+        "h4": {
+          "title": "Expert-Led Crews",
+          "description": "Experienced Supervisors"
+        }
+      }
+    },
+    "capabilities": {
+      "title": "KEY CAPABILITIES",
+      "subtitle": "Comprehensive cleaning package designed for construction environments",
+      "c1": {
+        "title": "Debris Removal",
+        "description": "All waste, scrap, and packaging removed."
+      },
+      "c2": {
+        "title": "Fine Dust Removal",
+        "description": "HEPA-filter vacuums and multi-pass wipe-downs."
+      },
+      "c3": {
+        "title": "Surface Detailing",
+        "description": "Countertops, cabinetry, fixtures polished to a shine."
+      },
+      "c4": {
+        "title": "Window & Glass Cleaning",
+        "description": "Interior & exterior streak-free finish."
+      },
+      "c5": {
+        "title": "Floor Finishing",
+        "description": "Sweep, mop, polish, and seal as required."
+      },
+      "c6": {
+        "title": "High & Low Detailing",
+        "description": "Vents, light fixtures, baseboards, and trim."
+      },
+      "c7": {
+        "title": "Final Punch Support",
+        "description": "Touch-ups before client walk-through."
+      }
+    },
+    "technical": {
+      "title": "TECHNICAL HIGHLIGHTS",
+      "specs": {
+        "mobilization": {
+          "feature": "Mobilization",
+          "detail": "48 Hours"
+        },
+        "crew": {
+          "feature": "Crew Size",
+          "detail": "2–12 (scalable)"
+        },
+        "equipment": {
+          "feature": "Equipment",
+          "detail": "HEPA Vacuums, Industrial Scrubbers, Lifts"
+        },
+        "safety": {
+          "feature": "Safety",
+          "detail": "OSHA-Compliant PPE, Fall Protection"
+        },
+        "quality": {
+          "feature": "Quality Control",
+          "detail": "Supervisor Checklist, Client Sign-Off"
+        }
+      },
+      "applications": {
+        "app1": "Final project turnover",
+        "app2": "Renovation cleanup",
+        "app3": "Pre-inspection preparation",
+        "app4": "Occupancy readiness",
+        "app5": "Tenant improvements"
+      }
+    },
+    "process": {
+      "title": "OUR STREAMLINED APPROACH",
+      "step1": {
+        "title": "Scope & Site Alignment",
+        "description": "Review blueprints, schedule, and safety requirements."
+      },
+      "step2": {
+        "title": "Documentation Review",
+        "description": "Insurance, safety certifications, and compliance checks."
+      },
+      "step3": {
+        "title": "Mobilize Crews",
+        "description": "Onsite setup within 48 hours."
+      },
+      "step4": {
+        "title": "Cleaning Execution",
+        "description": "Multi-stage process, from rough clean to fine detail."
+      },
+      "step5": {
+        "title": "Quality Assurance Walkthrough",
+        "description": "Joint inspection with site manager."
+      },
+      "step6": {
+        "title": "Post-Job Report",
+        "description": "Before/after documentation and sign-off."
+      }
+    },
+    "safety": {
+      "title": "SAFETY & COMPLIANCE",
+      "description": "Our team follows OSHA standards for construction site safety, uses eco-friendly cleaning solutions, and maintains full insurance coverage. All crew members undergo site-specific safety training.",
+      "features": {
+        "f1": {
+          "title": "OSHA Standards",
+          "description": "Full compliance"
+        },
+        "f2": {
+          "title": "Certified Teams",
+          "description": "Trained professionals"
+        },
+        "f3": {
+          "title": "Eco-Friendly",
+          "description": "Green solutions"
+        },
+        "f4": {
+          "title": "Fully Insured",
+          "description": "Complete coverage"
+        }
+      },
+      "caseHighlight": {
+        "title": "Mini Case Highlight",
+        "description": "3-story office build – mobilized in 48 hours, completed full PCC in 5 days, passed final inspection on first review"
+      }
+    },
+    "cta": {
+      "title": "Ready for Spotless Results?",
+      "description": "Get your construction site inspection-ready with our professional cleaning services.",
+      "buttonText": "Schedule Your Service"
+    }
+  },
+  "CleaningContact": {
+    "hero": {
+      "title": "REQUEST CLEANING SERVICES",
+      "subtitle": "48-hour mobilization for your post-construction cleaning needs"
+    },
+    "form": {
+      "title": "Get Your Free Quote",
+      "subtitle": "Tell us about your project and we'll provide a customized solution",
+      "labels": {
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "company": "Company Name",
+        "projectType": "Project Type",
+        "location": "Project Location",
+        "timeline": "Timeline",
+        "squareFootage": "Square Footage",
+        "details": "Project Details",
+        "submitButton": "Request Quote",
+        "submitting": "Submitting..."
+      },
+      "projectTypes": {
+        "commercial": "Commercial Build",
+        "residential": "Residential",
+        "renovation": "Renovation",
+        "industrial": "Industrial"
+      },
+      "timelines": {
+        "immediate": "Immediate",
+        "week": "This Week",
+        "month": "This Month",
+        "planning": "Planning"
+      }
+    }
   }
-  
 } 

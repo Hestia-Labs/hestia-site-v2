@@ -361,5 +361,203 @@
   "WorkPage": {
     "pageTitle": "Nuestro Trabajo",
     "pageSubtitle": "Una selección curada de nuestros proyectos recientes, que muestran nuestro enfoque en diseño, desarrollo y resolución de problemas creativos."
+  },
+  "CleaningServices": {
+    "hero": {
+      "title": "SERVICIOS DE LIMPIEZA POST-CONSTRUCCIÓN",
+      "subtitle": "Limpieza de precisión para entregas de proyectos impecables.",
+      "description": "Soluciones de limpieza integrales y conformes con las normas de seguridad, diseñadas para sitios de construcción y renovación. Nuestros equipos capacitados entregan espacios impecables, listos para inspección — a tiempo, siempre.",
+      "stats": {
+        "mobilization": "48 HR",
+        "safety": "OSHA",
+        "inspection": "100%"
+      },
+      "ctaText": "SOLICITAR DISPONIBILIDAD",
+      "downloadText": "DESCARGAR HOJA DE SERVICIO"
+    },
+    "overview": {
+      "title": "RESUMEN",
+      "description": "Proporcionamos servicios completos de limpieza post-construcción, incluyendo eliminación de escombros, detallado de superficies y control de polvo, para preparar su sitio para la entrega al cliente o la ocupación. Nuestros equipos están capacitados en OSHA, totalmente asegurados y equipados con sistemas de limpieza de grado industrial. Desde construcciones comerciales hasta residencias de lujo, garantizamos que cada superficie — desde pisos hasta accesorios — cumpla con el más alto estándar de limpieza.",
+      "coverage": {
+        "area1": "Área del Gran Houston",
+        "area2": "Este de Texas",
+        "area3": "Sur de Texas"
+      },
+      "highlights": {
+        "h1": {
+          "title": "Prácticas de Seguridad Conforme a OSHA",
+          "description": "Estándares de la Industria"
+        },
+        "h2": {
+          "title": "Movilización Rápida",
+          "description": "48 Horas"
+        },
+        "h3": {
+          "title": "Garantía Libre de Polvo",
+          "description": "Listo para Inspección Final"
+        },
+        "h4": {
+          "title": "Equipos Dirigidos por Expertos",
+          "description": "Supervisores Experimentados"
+        }
+      }
+    },
+    "capabilities": {
+      "title": "CAPACIDADES CLAVE",
+      "subtitle": "Paquete de limpieza integral diseñado para entornos de construcción",
+      "c1": {
+        "title": "Eliminación de Escombros",
+        "description": "Todos los residuos, chatarra y embalaje eliminados."
+      },
+      "c2": {
+        "title": "Eliminación de Polvo Fino",
+        "description": "Aspiradoras con filtro HEPA y limpiezas múltiples."
+      },
+      "c3": {
+        "title": "Detallado de Superficies",
+        "description": "Encimeras, gabinetes, accesorios pulidos hasta brillar."
+      },
+      "c4": {
+        "title": "Limpieza de Ventanas y Vidrios",
+        "description": "Acabado sin rayas interior y exterior."
+      },
+      "c5": {
+        "title": "Acabado de Pisos",
+        "description": "Barrer, trapear, pulir y sellar según se requiera."
+      },
+      "c6": {
+        "title": "Detallado Alto y Bajo",
+        "description": "Ventilaciones, accesorios de iluminación, zócalos y molduras."
+      },
+      "c7": {
+        "title": "Soporte de Toque Final",
+        "description": "Retoques antes del recorrido con el cliente."
+      }
+    },
+    "technical": {
+      "title": "ASPECTOS TÉCNICOS DESTACADOS",
+      "specs": {
+        "mobilization": {
+          "feature": "Movilización",
+          "detail": "48 Horas"
+        },
+        "crew": {
+          "feature": "Tamaño del Equipo",
+          "detail": "2–12 (escalable)"
+        },
+        "equipment": {
+          "feature": "Equipamiento",
+          "detail": "Aspiradoras HEPA, Fregadoras Industriales, Elevadores"
+        },
+        "safety": {
+          "feature": "Seguridad",
+          "detail": "EPP Conforme a OSHA, Protección contra Caídas"
+        },
+        "quality": {
+          "feature": "Control de Calidad",
+          "detail": "Lista de Verificación del Supervisor, Aprobación del Cliente"
+        }
+      },
+      "applications": {
+        "app1": "Entrega final del proyecto",
+        "app2": "Limpieza de renovación",
+        "app3": "Preparación previa a la inspección",
+        "app4": "Preparación para ocupación",
+        "app5": "Mejoras para inquilinos"
+      }
+    },
+    "process": {
+      "title": "NUESTRO ENFOQUE SIMPLIFICADO",
+      "step1": {
+        "title": "Alcance y Alineación del Sitio",
+        "description": "Revisar planos, cronograma y requisitos de seguridad."
+      },
+      "step2": {
+        "title": "Revisión de Documentación",
+        "description": "Seguros, certificaciones de seguridad y verificaciones de cumplimiento."
+      },
+      "step3": {
+        "title": "Movilizar Equipos",
+        "description": "Instalación en el sitio dentro de 48 horas."
+      },
+      "step4": {
+        "title": "Ejecución de Limpieza",
+        "description": "Proceso de múltiples etapas, desde limpieza gruesa hasta detalles finos."
+      },
+      "step5": {
+        "title": "Recorrido de Garantía de Calidad",
+        "description": "Inspección conjunta con el gerente del sitio."
+      },
+      "step6": {
+        "title": "Informe Post-Trabajo",
+        "description": "Documentación antes/después y aprobación."
+      }
+    },
+    "safety": {
+      "title": "SEGURIDAD Y CUMPLIMIENTO",
+      "description": "Nuestro equipo sigue los estándares de OSHA para la seguridad en sitios de construcción, utiliza soluciones de limpieza ecológicas y mantiene cobertura de seguro completa. Todos los miembros del equipo reciben capacitación de seguridad específica del sitio.",
+      "features": {
+        "f1": {
+          "title": "Estándares OSHA",
+          "description": "Cumplimiento total"
+        },
+        "f2": {
+          "title": "Equipos Certificados",
+          "description": "Profesionales capacitados"
+        },
+        "f3": {
+          "title": "Ecológico",
+          "description": "Soluciones verdes"
+        },
+        "f4": {
+          "title": "Totalmente Asegurado",
+          "description": "Cobertura completa"
+        }
+      },
+      "caseHighlight": {
+        "title": "Mini Caso Destacado",
+        "description": "Edificio de oficinas de 3 pisos – movilizado en 48 horas, completó limpieza completa post-construcción en 5 días, pasó la inspección final en la primera revisión"
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Resultados Impecables?",
+      "description": "Prepara tu sitio de construcción para la inspección con nuestros servicios profesionales de limpieza.",
+      "buttonText": "Programa Tu Servicio"
+    }
+  },
+  "CleaningContact": {
+    "hero": {
+      "title": "SOLICITA SERVICIOS DE LIMPIEZA",
+      "subtitle": "Movilización en 48 horas para tus necesidades de limpieza post-construcción"
+    },
+    "form": {
+      "title": "Obtén Tu Cotización Gratuita",
+      "subtitle": "Cuéntanos sobre tu proyecto y te proporcionaremos una solución personalizada",
+      "labels": {
+        "fullName": "Nombre Completo",
+        "email": "Correo Electrónico",
+        "phone": "Número de Teléfono",
+        "company": "Nombre de la Empresa",
+        "projectType": "Tipo de Proyecto",
+        "location": "Ubicación del Proyecto",
+        "timeline": "Cronograma",
+        "squareFootage": "Pies Cuadrados",
+        "details": "Detalles del Proyecto",
+        "submitButton": "Solicitar Cotización",
+        "submitting": "Enviando..."
+      },
+      "projectTypes": {
+        "commercial": "Construcción Comercial",
+        "residential": "Residencial",
+        "renovation": "Renovación",
+        "industrial": "Industrial"
+      },
+      "timelines": {
+        "immediate": "Inmediato",
+        "week": "Esta Semana",
+        "month": "Este Mes",
+        "planning": "Planificación"
+      }
+    }
   }
 } 
