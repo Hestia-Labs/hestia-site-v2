@@ -122,8 +122,7 @@ export default function HeroSection({
             
             <Button
               size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg"
+              className="bg-black border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-medium px-8 py-6 text-lg transition-all"
             >
               <FileText className="w-5 h-5 mr-2" />
               {downloadText}
