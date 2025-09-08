@@ -70,7 +70,8 @@ export function Navbar({ invert = false }: NavbarProps) {
       initial={{ y: 0, backgroundColor: "transparent" }}
       animate={{
         y: showNavbar ? 0 : -100,
-        backgroundColor: scrollY > 50 ? (invert ? "black" : "hsl(var(--background))") : "transparent",
+        backgroundColor: scrollY > 50 ? (invert ? "rgba(17, 24, 39, 0.95)" : "rgba(255, 255, 255, 0.95)") : "transparent",
+        backdropFilter: scrollY > 50 ? "blur(10px)" : "none",
       }}
       transition={{ duration: 0.3 }}
       className={cn("flex items-center px-8  text-xl fixed top-0 left-0 right-0 z-50 shadow-md", invert && "text-white")}
@@ -91,10 +92,10 @@ export function Navbar({ invert = false }: NavbarProps) {
               <TransitionLink href={navbarItems.home.href} 
                 className={cn(
                   "group inline-flex h-9 w-max items-center justify-center rounded-sm px-4 py-2 text-sm font-medium transition-colors focus:outline-none",
-                  "font-bellefair text-base",
+                  "font-bellefair text-base ",
                   invert 
-                    ? "text-yellow-400 hover:text-yellow-300" 
-                    : "text-yellow-600 hover:text-yellow-500"
+                    ? "text-amber-400 hover:text-yellow-400" 
+                    : "text-amber-500 hover:text-amber-600"
                 )}
               >
                 {navbarItems.home.title}
@@ -109,8 +110,8 @@ export function Navbar({ invert = false }: NavbarProps) {
                     "group inline-flex h-9 w-max items-center justify-center rounded-sm px-4 py-2 text-sm  transition-colors focus:outline-none",
                     "font-bellefair text-base",
                     invert 
-                      ? "text-white hover:text-yellow-400" 
-                      : "text-black hover:text-yellow-600"
+                      ? "text-white hover:text-amber-400" 
+                      : "text-gray-700 hover:text-amber-500"
                   )}
                 >
                   {link.title}
@@ -132,7 +133,7 @@ export function Navbar({ invert = false }: NavbarProps) {
         <TransitionLink href={navbarItems.contact.href} >
           <Button
             className={cn(
-              "font-bellefair uppercase bg-yellow-500 hover:bg-yellow-600 text-black border-0"
+              "font-bellefair uppercase bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-gray-900 border-0 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all"
             )}
           >
             {navbarItems.contact.title}
@@ -170,7 +171,7 @@ export function Navbar({ invert = false }: NavbarProps) {
             exit="closed"
             variants={menuVariants}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="fixed inset-0 bg-black z-40 flex flex-col md:hidden"
+            className="fixed inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 z-40 flex flex-col md:hidden"
           >
             {/* Animated Background Logo */}
             <motion.div
@@ -198,7 +199,7 @@ export function Navbar({ invert = false }: NavbarProps) {
               {/* Home Link */}
               <TransitionLink
                 href={navbarItems.home.href}
-                className="block uppercase font-bellefair text-2xl text-yellow-400 hover:text-yellow-300 transition-colors p-3 border-b border-yellow-400/30"
+                className="block uppercase font-bellefair text-2xl text-amber-400 hover:text-yellow-400 transition-colors p-3 border-b-2 border-amber-400/30"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {navbarItems.home.title}
@@ -209,7 +210,7 @@ export function Navbar({ invert = false }: NavbarProps) {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="block uppercase font-bellefair text-xl text-white hover:text-yellow-400 transition-colors p-3"
+                  className="block uppercase font-bellefair text-xl text-white hover:text-amber-400 transition-colors p-3"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.title}
@@ -219,7 +220,7 @@ export function Navbar({ invert = false }: NavbarProps) {
               {/* Contact CTA */}
               <TransitionLink
                 href={navbarItems.contact.href}
-                className="block uppercase font-bellefair text-xl text-black bg-yellow-500 hover:bg-yellow-600 p-4 mt-8 text-center transition-colors rounded"
+                className="block uppercase font-bellefair text-xl text-gray-900 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 p-4 mt-8 text-center transition-all rounded-xl shadow-lg hover:shadow-xl"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {navbarItems.contact.title}

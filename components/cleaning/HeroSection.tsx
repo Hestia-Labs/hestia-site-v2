@@ -34,9 +34,9 @@ export default function HeroSection({
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-purple-950/20 to-gray-900" />
       
       {/* Animated grid pattern */}
       <div className="absolute inset-0 opacity-20">
@@ -94,10 +94,10 @@ export default function HeroSection({
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-                  className="bg-white/5 border border-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/10 transition-all duration-300"
+                  className="bg-gradient-to-br from-white/10 to-white/5 border border-amber-400/30 backdrop-blur-sm rounded-xl p-6 hover:border-amber-400/50 hover:bg-white/15 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-amber-400/20"
                 >
-                  <Icon className="w-8 h-8 text-yellow-500 mb-3 mx-auto" />
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                  <Icon className="w-8 h-8 text-amber-400 mb-3 mx-auto" />
+                  <div className="text-3xl  text-white mb-1">{stat.value}</div>
                   <div className="text-sm text-gray-400 uppercase tracking-wide">{stat.suffix}</div>
                 </motion.div>
               );
@@ -114,7 +114,7 @@ export default function HeroSection({
             <TransitionLink href="/cleaning-contact">
               <Button
                 size="lg"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black font-medium px-8 py-6 text-lg"
+                className="bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-gray-900  px-8 py-6 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
               >
                 {ctaText}
               </Button>
@@ -122,7 +122,7 @@ export default function HeroSection({
             
             <Button
               size="lg"
-              className="bg-black border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-500 hover:text-black font-medium px-8 py-6 text-lg transition-all"
+              className="bg-gradient-to-r from-gray-800 to-gray-900 border-2 border-amber-400 text-amber-400 hover:from-amber-400 hover:to-yellow-500 hover:text-gray-900 hover:border-amber-500 font-medium px-8 py-6 text-lg transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               <FileText className="w-5 h-5 mr-2" />
               {downloadText}

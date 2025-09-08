@@ -13,22 +13,22 @@ export default async function CleaningContactPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative bg-black text-white py-20 pt-32">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 pt-32">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-purple-950/20 to-gray-900" />
         
         {/* Grid Background */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
-            backgroundImage: `linear-gradient(to right, #ffffff10 1px, transparent 1px),
-                             linear-gradient(to bottom, #ffffff10 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(to right, #fbbf2410 1px, transparent 1px),
+                             linear-gradient(to bottom, #fbbf2410 1px, transparent 1px)`,
             backgroundSize: '50px 50px'
           }} />
         </div>
 
         <div className="relative z-10 container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bellefair mb-6">{t("hero.title")}</h1>
-            <p className="text-xl text-gray-300">{t("hero.subtitle")}</p>
+            <h1 className="text-4xl md:text-6xl font-bellefair mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-yellow-400">{t("hero.title")}</h1>
+            <p className="text-xl text-gray-200">{t("hero.subtitle")}</p>
           </div>
         </div>
       </section>

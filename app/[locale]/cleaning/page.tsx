@@ -194,16 +194,16 @@ export default async function CleaningServices() {
       </div>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-yellow-500">
+      <section className="py-20 bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-400">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bellefair text-black mb-6">
+          <h2 className="text-4xl md:text-5xl font-bellefair text-gray-900 mb-6 ">
             {t("cta.title")}
           </h2>
-          <p className="text-xl text-black/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-800 mb-8 max-w-2xl mx-auto">
             {t("cta.description")}
           </p>
           <TransitionLink href="/cleaning-contact">
-            <Button size="lg" className="bg-black hover:bg-gray-900 text-white px-8 py-6 text-lg">
+            <Button size="lg" className="bg-gray-900 hover:bg-gray-800 text-white px-8 py-6 text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all border-2 border-gray-700">
               {t("cta.buttonText")}
             </Button>
           </TransitionLink>

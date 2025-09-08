@@ -32,7 +32,7 @@ export default function KeyCapabilities({
   }));
 
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 text-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -45,7 +45,7 @@ export default function KeyCapabilities({
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bellefair mb-4">{title}</h2>
             <p className="text-xl text-gray-400">{subtitle}</p>
-            <div className="h-1 w-20 bg-yellow-500 mx-auto mt-6" />
+                          <div className="h-1 w-20 bg-gradient-to-r from-amber-400 to-yellow-500 mx-auto mt-6 rounded-full" />
           </div>
 
           {/* Capabilities Grid */}
@@ -61,13 +61,13 @@ export default function KeyCapabilities({
                   transition={{ delay: index * 0.1, duration: 0.6 }}
                   className="group"
                 >
-                  <div className="bg-white/5 border border-white/10 rounded-lg p-6 hover:bg-white/10 transition-all duration-300 h-full">
+                  <div className="bg-gradient-to-br from-white/10 to-white/5 border border-amber-400/20 rounded-xl p-6 hover:border-amber-400/40 hover:bg-white/15 transition-all duration-300 h-full hover:shadow-lg hover:shadow-amber-400/10 hover:scale-105">
                     <div className="flex items-start mb-4">
-                      <div className="p-3 bg-yellow-500/20 rounded-lg group-hover:bg-yellow-500/30 transition-colors">
-                        <Icon className="w-6 h-6 text-yellow-500" />
+                      <div className="p-3 bg-gradient-to-br from-amber-400/20 to-yellow-500/20 rounded-lg group-hover:from-amber-400/30 group-hover:to-yellow-500/30 transition-all">
+                        <Icon className="w-6 h-6 text-amber-400" />
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold mb-3">{capability.title}</h3>
+                    <h3 className="text-xl  mb-3">{capability.title}</h3>
                     <p className="text-gray-400 leading-relaxed">{capability.description}</p>
                   </div>
                 </motion.div>
@@ -81,7 +81,7 @@ export default function KeyCapabilities({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.8 }}
-            className="mt-16 text-center bg-gradient-to-r from-yellow-500/10 to-yellow-600/10 border border-yellow-500/20 rounded-lg p-8"
+            className="mt-16 text-center bg-gradient-to-r from-amber-400/15 to-yellow-500/15 border-2 border-amber-400/30 rounded-2xl p-8 hover:border-amber-400/50 transition-all shadow-xl shadow-amber-400/10"
           >
             <h3 className="text-2xl font-bellefair mb-4">COMPLETE SERVICE INTEGRATION</h3>
             <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -91,15 +91,15 @@ export default function KeyCapabilities({
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
               <div className="text-center">
-                <div className="text-yellow-500 font-bold text-lg mb-2">Integrated Teams</div>
+                <div className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500  text-lg mb-2">Integrated Teams</div>
                 <div className="text-gray-400">All services managed in-house</div>
               </div>
               <div className="text-center">
-                <div className="text-yellow-500 font-bold text-lg mb-2">Quick Deployment</div>
+                <div className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500  text-lg mb-2">Quick Deployment</div>
                 <div className="text-gray-400">Mobilization in as little as 48 hours</div>
               </div>
               <div className="text-center">
-                <div className="text-yellow-500 font-bold text-lg mb-2">Safety First</div>
+                <div className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500  text-lg mb-2">Safety First</div>
                 <div className="text-gray-400">Trained crews, PPE, and site compliance</div>
               </div>
             </div>

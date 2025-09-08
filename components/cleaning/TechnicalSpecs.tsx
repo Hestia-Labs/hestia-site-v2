@@ -20,7 +20,7 @@ export default function TechnicalSpecs({
   applications,
 }: TechnicalSpecsProps) {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-gray-50 via-white to-gray-50">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -38,9 +38,9 @@ export default function TechnicalSpecs({
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow"
             >
-              <div className="bg-black text-white p-4">
+              <div className="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-4">
                 <h3 className="text-xl font-bellefair">Technical Specifications</h3>
               </div>
               <div className="p-6">
@@ -49,7 +49,7 @@ export default function TechnicalSpecs({
                     {specifications.map((spec, index) => (
                       <tr key={index} className="border-b border-gray-200 last:border-0">
                         <td className="py-4 pr-4 font-medium text-gray-700">{spec.feature}</td>
-                        <td className="py-4 text-gray-900 font-semibold">{spec.detail}</td>
+                        <td className="py-4 text-gray-900 ">{spec.detail}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -63,10 +63,10 @@ export default function TechnicalSpecs({
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              className="bg-white rounded-xl shadow-xl overflow-hidden border border-amber-200 hover:shadow-2xl transition-shadow"
             >
-              <div className="bg-yellow-500 text-black p-4">
-                <h3 className="text-xl font-bellefair">Typical Applications</h3>
+              <div className="bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900 p-4">
+                <h3 className="text-xl font-bellefair ">Typical Applications</h3>
               </div>
               <div className="p-6">
                 <ul className="space-y-4">
@@ -79,7 +79,7 @@ export default function TechnicalSpecs({
                       transition={{ delay: 0.4 + index * 0.05, duration: 0.4 }}
                       className="flex items-center"
                     >
-                      <div className="w-2 h-2 bg-yellow-500 rounded-full mr-3 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full mr-3 flex-shrink-0" />
                       <span className="text-gray-700 text-lg">{app}</span>
                     </motion.li>
                   ))}

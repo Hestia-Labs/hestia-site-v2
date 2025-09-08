@@ -74,7 +74,7 @@ export default function ContactForm({
   };
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -85,7 +85,7 @@ export default function ContactForm({
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bellefair text-black mb-4">{title}</h2>
             <p className="text-lg text-gray-600">{subtitle}</p>
-            <div className="h-1 w-20 bg-yellow-500 mx-auto mt-6" />
+            <div className="h-1 w-20 bg-gradient-to-r from-amber-400 to-yellow-500 mx-auto mt-6 rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -96,36 +96,36 @@ export default function ContactForm({
               transition={{ delay: 0.2, duration: 0.6 }}
               className="lg:col-span-1"
             >
-              <div className="bg-black text-white rounded-lg p-8 sticky top-24">
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8 sticky top-24 shadow-2xl border border-amber-400/20">
                 <h3 className="text-2xl font-bellefair mb-6">Quick Response</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-center">
-                    <Clock className="w-5 h-5 text-yellow-500 mr-3" />
+                    <Clock className="w-5 h-5 text-amber-400 mr-3" />
                     <div>
                       <div className="text-sm text-gray-400">Mobilization</div>
-                      <div className="font-semibold">48 Hours</div>
+                      <div className="">48 Hours</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
-                    <Phone className="w-5 h-5 text-yellow-500 mr-3" />
+                    <Phone className="w-5 h-5 text-amber-400 mr-3" />
                     <div>
                       <div className="text-sm text-gray-400">Emergency Hotline</div>
-                      <div className="font-semibold">1-800-CLEAN-NOW</div>
+                      <div className="">1-800-CLEAN-NOW</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
-                    <Mail className="w-5 h-5 text-yellow-500 mr-3" />
+                    <Mail className="w-5 h-5 text-amber-400 mr-3" />
                     <div>
                       <div className="text-sm text-gray-400">Email</div>
-                      <div className="font-semibold text-sm">info@cleaningservices.com</div>
+                      <div className=" text-sm">info@cleaningservices.com</div>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 p-4 bg-yellow-500/10 border border-yellow-500/30 rounded">
+                <div className="mt-8 p-4 bg-gradient-to-r from-amber-400/10 to-yellow-500/10 border border-amber-400/30 rounded-lg">
                   <p className="text-sm text-gray-300">
                     OSHA-compliant crews ready for immediate deployment across Texas.
                   </p>
@@ -140,7 +140,7 @@ export default function ContactForm({
               transition={{ delay: 0.3, duration: 0.6 }}
               className="lg:col-span-2"
             >
-              <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow-lg p-8">
+              <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
                 {/* Personal Information */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                   <div>
@@ -153,7 +153,7 @@ export default function ContactForm({
                       value={formData.fullName}
                       onChange={(e) => handleChange("fullName", e.target.value)}
                       required
-                      className="border-gray-300 focus:border-yellow-500"
+                      className="border-gray-300 focus:border-amber-400 rounded-lg"
                     />
                   </div>
                   
@@ -167,7 +167,7 @@ export default function ContactForm({
                       value={formData.company}
                       onChange={(e) => handleChange("company", e.target.value)}
                       required
-                      className="border-gray-300 focus:border-yellow-500"
+                      className="border-gray-300 focus:border-amber-400 rounded-lg"
                     />
                   </div>
                   
@@ -182,7 +182,7 @@ export default function ContactForm({
                       value={formData.email}
                       onChange={(e) => handleChange("email", e.target.value)}
                       required
-                      className="border-gray-300 focus:border-yellow-500"
+                      className="border-gray-300 focus:border-amber-400 rounded-lg"
                     />
                   </div>
                   
@@ -197,7 +197,7 @@ export default function ContactForm({
                       value={formData.phone}
                       onChange={(e) => handleChange("phone", e.target.value)}
                       required
-                      className="border-gray-300 focus:border-yellow-500"
+                      className="border-gray-300 focus:border-amber-400 rounded-lg"
                     />
                   </div>
                 </div>
@@ -215,7 +215,7 @@ export default function ContactForm({
                     >
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                         {projectTypes.map((type) => (
-                          <div key={type} className="flex items-center space-x-2 p-3 border rounded hover:bg-gray-50">
+                          <div key={type} className="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg hover:bg-amber-50 hover:border-amber-300 transition-all">
                             <RadioGroupItem value={type} id={type} />
                             <Label htmlFor={type} className="cursor-pointer">{type}</Label>
                           </div>
@@ -234,9 +234,9 @@ export default function ContactForm({
                         id="location"
                         value={formData.location}
                         onChange={(e) => handleChange("location", e.target.value)}
-                        placeholder="City, State"
-                        required
-                        className="border-gray-300 focus:border-yellow-500"
+                                              placeholder="City, State"
+                      required
+                      className="border-gray-300 focus:border-amber-400 rounded-lg"
                       />
                     </div>
                     
@@ -249,8 +249,8 @@ export default function ContactForm({
                         id="squareFootage"
                         value={formData.squareFootage}
                         onChange={(e) => handleChange("squareFootage", e.target.value)}
-                        placeholder="Approximate sq ft"
-                        className="border-gray-300 focus:border-yellow-500"
+                                              placeholder="Approximate sq ft"
+                      className="border-gray-300 focus:border-amber-400 rounded-lg"
                       />
                     </div>
                   </div>
@@ -266,7 +266,7 @@ export default function ContactForm({
                     >
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
                         {timelines.map((timeline) => (
-                          <div key={timeline} className="flex items-center space-x-2 p-3 border rounded hover:bg-gray-50">
+                          <div key={timeline} className="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg hover:bg-amber-50 hover:border-amber-300 transition-all">
                             <RadioGroupItem value={timeline} id={timeline} />
                             <Label htmlFor={timeline} className="cursor-pointer text-sm">{timeline}</Label>
                           </div>
@@ -284,7 +284,7 @@ export default function ContactForm({
                       value={formData.details}
                       onChange={(e) => handleChange("details", e.target.value)}
                       rows={4}
-                      className="border-gray-300 focus:border-yellow-500"
+                      className="border-gray-300 focus:border-amber-400 rounded-lg"
                       placeholder="Please provide any additional information about your cleaning requirements..."
                     />
                   </div>
@@ -293,7 +293,7 @@ export default function ContactForm({
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-6 text-lg"
+                  className="w-full bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-gray-900  py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all"
                 >
                   {isSubmitting ? formLabels.submitting : formLabels.submitButton}
                 </Button>
