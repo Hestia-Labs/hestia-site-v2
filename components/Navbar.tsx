@@ -8,6 +8,7 @@ import { Menu, X } from "lucide-react";
 import TransitionLink from "./TransitionLink";
 import LanguageSwitcher from "./Languaje";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -27,16 +28,22 @@ export function Navbar({ invert = false }: NavbarProps) {
   const [showNavbar, setShowNavbar] = React.useState(true);
   const [scrollY, setScrollY] = React.useState(0);
   const lastScrollY = React.useRef(0);
+  const pathname = usePathname();
+  const t = useTranslations('Navigation.cleaning');
+
+  // Force white background for cleaning-contact page
+  const isCleaningContactPage = pathname?.includes('/cleaning-contact');
+  const shouldUseWhiteBg = isCleaningContactPage;
 
   const navbarItems = React.useMemo(() => ({
-    home: { title: "HOME", href: "/cleaning" },
+    home: { title: t('home'), href: "/cleaning" },
     links: [
-      { title: "SERVICES", href: "/cleaning#services" },
-      { title: "PROCESS", href: "/cleaning#process" },
-      { title: "SAFETY", href: "/cleaning#safety" },
+      { title: t('services'), href: "/cleaning#services" },
+      { title: t('process'), href: "/cleaning#process" },
+      { title: t('safety'), href: "/cleaning#safety" },
     ],
-    contact: { title: "GET QUOTE", href: "/cleaning-contact" },
-  }), []);
+    contact: { title: t('getQuote'), href: "/cleaning-contact" },
+  }), [t]);
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -70,16 +77,16 @@ export function Navbar({ invert = false }: NavbarProps) {
       initial={{ y: 0, backgroundColor: "transparent" }}
       animate={{
         y: showNavbar ? 0 : -100,
-        backgroundColor: scrollY > 50 ? (invert ? "rgba(17, 24, 39, 0.95)" : "rgba(255, 255, 255, 0.95)") : "transparent",
-        backdropFilter: scrollY > 50 ? "blur(10px)" : "none",
+        backgroundColor: scrollY > 50 || shouldUseWhiteBg ? "rgba(255, 255, 255, 0.95)" : (invert ? "rgba(17, 24, 39, 0.95)" : "transparent"),
+        backdropFilter: scrollY > 50 || shouldUseWhiteBg ? "blur(10px)" : "none",
       }}
       transition={{ duration: 0.3 }}
-      className={cn("flex items-center px-8  text-xl fixed top-0 left-0 right-0 z-50 shadow-md", invert && "text-white")}
+      className={cn("flex items-center px-8  text-xl fixed top-0 left-0 right-0 z-50 shadow-md", (invert && !shouldUseWhiteBg) && "text-white")}
     >
       {/* Left Section: Logo */}
       <div className="flex-1 flex items-center">
         <TransitionLink href="/cleaning" className="flex items-center z-50">
-          <Logo inverted={invert} className={cn("w-36 h-auto", { "opacity-0": isMenuOpen })} />
+          <Logo inverted={invert && !shouldUseWhiteBg} className={cn("w-36 h-auto", { "opacity-0": isMenuOpen })} />
         </TransitionLink>
       </div>
 
@@ -93,7 +100,7 @@ export function Navbar({ invert = false }: NavbarProps) {
                 className={cn(
                   "group inline-flex h-9 w-max items-center justify-center rounded-sm px-4 py-2 text-sm font-medium transition-colors focus:outline-none",
                   "font-bellefair text-base ",
-                  invert 
+                  (invert && !shouldUseWhiteBg)
                     ? "text-amber-400 hover:text-yellow-400" 
                     : "text-amber-500 hover:text-amber-600"
                 )}
@@ -109,7 +116,7 @@ export function Navbar({ invert = false }: NavbarProps) {
                   className={cn(
                     "group inline-flex h-9 w-max items-center justify-center rounded-sm px-4 py-2 text-sm  transition-colors focus:outline-none",
                     "font-bellefair text-base",
-                    invert 
+                    (invert && !shouldUseWhiteBg)
                       ? "text-white hover:text-amber-400" 
                       : "text-gray-700 hover:text-amber-500"
                   )}
@@ -126,8 +133,8 @@ export function Navbar({ invert = false }: NavbarProps) {
       <div className="hidden md:flex flex-1 justify-end items-center space-x-6">
         {/* Language Switcher */}
         <LanguageSwitcher 
-          className={cn(invert ? "text-white" : "text-black")}
-          buttonClassName={cn(invert ? "text-white" : "text-black")}
+          className={cn((invert && !shouldUseWhiteBg) ? "text-white" : "text-black")}
+          buttonClassName={cn((invert && !shouldUseWhiteBg) ? "text-white" : "text-black")}
         />
 
         <TransitionLink href={navbarItems.contact.href} >
@@ -145,8 +152,8 @@ export function Navbar({ invert = false }: NavbarProps) {
       <div className="md:hidden flex items-center space-x-4">
         {/* Language Switcher for Mobile */}
         <LanguageSwitcher 
-          className={cn(isMenuOpen ? "text-white" : invert ? "text-white" : "text-black")}
-          buttonClassName={cn(isMenuOpen ? "text-white" : invert ? "text-white" : "text-black")}
+          className={cn(isMenuOpen ? "text-white" : (invert && !shouldUseWhiteBg) ? "text-white" : "text-black")}
+          buttonClassName={cn(isMenuOpen ? "text-white" : (invert && !shouldUseWhiteBg) ? "text-white" : "text-black")}
         />
         
         <button
@@ -157,7 +164,7 @@ export function Navbar({ invert = false }: NavbarProps) {
           {isMenuOpen ? (
             <X className="w-8 h-8 text-white" />
           ) : (
-            <Menu className={cn("w-8 h-8", invert ? "text-white" : "text-black")} />
+            <Menu className={cn("w-8 h-8", (invert && !shouldUseWhiteBg) ? "text-white" : "text-black")} />
           )}
         </button>
       </div>

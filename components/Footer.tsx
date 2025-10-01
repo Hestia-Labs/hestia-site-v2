@@ -1,15 +1,14 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 import TransitionLink from "./TransitionLink";
 import { Separator } from "@/components/ui/separator";
-import { useTranslations } from "next-intl";
 import { Phone, Mail, MapPin, Clock, Shield, Award } from "lucide-react";
 import Logo from "./Logo";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
-  const footerT = useTranslations("Footer");
+  const t = useTranslations('Footer');
   
   const [formStatus, setFormStatus] = React.useState<{
     success: boolean;
@@ -18,29 +17,29 @@ export default function Footer() {
 
   const footerContent = React.useMemo(() => ({
     quickLinks: [
-      { title: "Home", href: "/cleaning" },
-      { title: "Services", href: "/cleaning#services" },
-      { title: "Process", href: "/cleaning#process" },
-      { title: "Safety Standards", href: "/cleaning#safety" },
-      { title: "Get Quote", href: "/cleaning-contact" },
+      { title: t('quickLinks.home'), href: "/cleaning" },
+      { title: t('quickLinks.services'), href: "/cleaning#services" },
+      { title: t('quickLinks.process'), href: "/cleaning#process" },
+      { title: t('quickLinks.safety'), href: "/cleaning#safety" },
+      { title: t('quickLinks.quote'), href: "/cleaning-contact" },
     ],
     contact: {
-      phone: "1-800-CLEAN-NOW",
-      email: "info@hestia-cleaning.com",
-      address: ["Houston, TX", "Dallas, TX", "San Antonio, TX"],
-      hours: "24/7 Emergency Response",
+      phone: t('contact.phone'),
+      email: t('contact.email'),
+      address: [t('contact.areas.houston'), t('contact.areas.suburbs'), t('contact.areas.north')],
+      hours: t('contact.hours'),
     },
     certifications: [
-      { icon: Shield, title: "OSHA Certified", description: "Safety Compliant" },
-      { icon: Award, title: "Licensed & Insured", description: "Full Coverage" },
-      { icon: Clock, title: "48 Hour Response", description: "Quick Mobilization" },
+      { icon: Shield, title: t('certifications.osha.title'), description: t('certifications.osha.description') },
+      { icon: Award, title: t('certifications.licensed.title'), description: t('certifications.licensed.description') },
+      { icon: Clock, title: t('certifications.response.title'), description: t('certifications.response.description') },
     ],
     legal: [
-      { title: "Privacy Policy", href: "#" },
-      { title: "Terms of Service", href: "#" },
-      { title: "Safety Guidelines", href: "#" },
+      { title: t('legal.privacy'), href: "#" },
+      { title: t('legal.terms'), href: "#" },
+      { title: t('legal.safety'), href: "#" },
     ],
-  }), []);
+  }), [t]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -54,33 +53,14 @@ export default function Footer() {
     } else {
       setFormStatus({
         success: false,
-        error: "Please enter a valid email address.",
+        error: t('newsletter.error'),
       });
     }
   };
 
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-black text-white">
-      {/* CTA Section */}
-      <div className="bg-gradient-to-r from-amber-400 to-yellow-500 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-6 md:mb-0">
-              <h3 className="font-bellefair text-4xl text-black mb-2">
-                Ready for a Spotless Site?
-              </h3>
-              <p className="text-black/80 text-lg">
-                Professional post-construction cleaning services available 24/7
-              </p>
-            </div>
-            <TransitionLink href="/cleaning-contact">
-              <button className="bg-gray-900 hover:bg-gray-800 text-white  py-4 px-8 rounded-lg text-lg transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 border-2 border-gray-700 hover:border-gray-600">
-                GET FREE QUOTE
-              </button>
-            </TransitionLink>
-          </div>
-        </div>
-      </div>
+
 
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -90,8 +70,7 @@ export default function Footer() {
               <Logo className="w-40 h-auto" inverted />
             </div>
             <p className="text-gray-400 mb-6">
-              Texas' trusted post-construction cleaning specialists. OSHA-compliant, 
-              fully insured, and ready for rapid deployment.
+              {t('companyDescription')}
             </p>
             <div className="space-y-3">
               <div className="flex items-center text-gray-300">
@@ -111,7 +90,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-1">
-            <h3 className="font-bellefair text-xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">QUICK LINKS</h3>
+            <h3 className="font-bellefair text-xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">{t('quickLinks.title')}</h3>
             <ul className="space-y-3">
               {footerContent.quickLinks.map((link) => (
                 <li key={link.title}>
@@ -129,7 +108,7 @@ export default function Footer() {
 
           {/* Service Areas */}
           <div className="md:col-span-1">
-            <h3 className="font-bellefair text-xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">SERVICE AREAS</h3>
+            <h3 className="font-bellefair text-xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">{t('serviceAreas.title')}</h3>
             <ul className="space-y-3">
               {footerContent.contact.address.map((area, index) => (
                 <li key={index} className="flex items-start text-gray-400">
@@ -140,14 +119,14 @@ export default function Footer() {
             </ul>
             <div className="mt-6">
               <p className="text-gray-400 text-sm">
-                Serving all of East Texas, South Texas, and the Greater Houston Area
+                {t('serviceAreas.description')}
               </p>
             </div>
           </div>
 
           {/* Certifications */}
           <div className="md:col-span-1">
-            <h3 className="font-bellefair text-xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">CERTIFICATIONS</h3>
+            <h3 className="font-bellefair text-xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">{t('certifications.title')}</h3>
             <div className="space-y-4">
               {footerContent.certifications.map((cert, index) => {
                 const Icon = cert.icon;
@@ -172,16 +151,16 @@ export default function Footer() {
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-amber-400/20">
             <div className="max-w-2xl mx-auto text-center">
               <h3 className="font-bellefair text-2xl mb-4 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">
-                STAY UPDATED
+                {t('newsletter.title')}
               </h3>
               <p className="text-gray-400 mb-6">
-                Get the latest updates on cleaning standards, safety protocols, and special offers.
+                {t('newsletter.description')}
               </p>
               <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" onSubmit={handleSubmit}>
                 <input
                   type="email"
                   name="email"
-                  placeholder="Enter your email"
+                  placeholder={t('newsletter.placeholder')}
                   required
                   className="flex-1 px-4 py-3 bg-gray-900/50 border border-amber-400/30 rounded-lg focus:outline-none focus:border-amber-400 text-white placeholder-gray-400 backdrop-blur-sm"
                 />
@@ -189,11 +168,11 @@ export default function Footer() {
                   type="submit"
                   className="px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-gray-900  rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5"
                 >
-                  SUBSCRIBE
+                  {t('newsletter.subscribe')}
                 </button>
               </form>
               {formStatus.success && (
-                <p className="text-amber-400 mt-3">Thank you for subscribing!</p>
+                <p className="text-amber-400 mt-3">{t('newsletter.success')}</p>
               )}
               {formStatus.error && (
                 <p className="text-red-500 mt-3">{formStatus.error}</p>
@@ -205,7 +184,7 @@ export default function Footer() {
         {/* Bottom Legal Footer */}
         <div className="flex flex-col md:flex-row md:justify-between items-center gap-4 text-sm">
           <p className="text-gray-400 text-center md:text-left">
-            © {new Date().getFullYear()} Hestia Cleaning Services. All rights reserved.
+            {t('legal.copyright', { year: new Date().getFullYear() })}
           </p>
           <div className="flex items-center gap-6">
             {footerContent.legal.map((link) => (

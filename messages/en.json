@@ -77,7 +77,14 @@
     "careers": "Careers",
     "servicesOverview": "SERVICES OVERVIEW",
     "exploreServices": "Explore our full range of services",
-    "serviceMenu": "SERVICES"
+    "serviceMenu": "SERVICES",
+    "cleaning": {
+      "home": "HOME",
+      "services": "SERVICES",
+      "process": "PROCESS",
+      "safety": "SAFETY",
+      "getQuote": "GET QUOTE"
+    }
   },
   "ServiceDescriptions": {
     "uxuiDesign": "User-centered design to create intuitive and engaging experiences.",
@@ -264,13 +271,13 @@
       {
         "id": "careers",
         "title": "Careers",
-        "email": "careers@hestialabs.io",
+        "email": "INFO@HESTIASITESOLUTIONS.COM",
         "description": "Join our amazing team"
       },
       {
         "id": "press",
         "title": "Press",
-        "email": "press@hestialabs.io",
+        "email": "INFO@HESTIASITESOLUTIONS.COM",
         "description": "Get in touch for media inquiries"
       }
     ],
@@ -362,15 +369,102 @@
       "buttonText": "Contact Us"
     }
   },
+  "Footer": {
+    "companyDescription": "Texas' trusted post-construction cleaning specialists. OSHA-compliant, fully insured, and ready for rapid deployment.",
+    "quickLinks": {
+      "title": "QUICK LINKS",
+      "home": "Home",
+      "services": "Services", 
+      "process": "Process",
+      "safety": "Safety Standards",
+      "quote": "Get Quote"
+    },
+    "serviceAreas": {
+      "title": "SERVICE AREAS",
+      "description": "Serving the Greater Houston Area"
+    },
+    "certifications": {
+      "title": "CERTIFICATIONS",
+      "osha": {
+        "title": "OSHA Certified",
+        "description": "Safety Compliant"
+      },
+      "licensed": {
+        "title": "Licensed & Insured", 
+        "description": "Full Coverage"
+      },
+      "response": {
+        "title": "48 Hour Response",
+        "description": "Quick Mobilization"
+      }
+    },
+    "contact": {
+      "phone": "1-800-CLEAN-NOW",
+      "email": "info@hestiasitesolutions.com",
+      "hours": "24/7 Emergency Response",
+      "areas": {
+        "houston": "Houston",
+        "suburbs": "Katy • Sugar Land", 
+        "north": "The Woodlands • Cypress"
+      }
+    },
+    "newsletter": {
+      "title": "STAY UPDATED",
+      "description": "Get the latest updates on cleaning standards, safety protocols, and special offers.",
+      "placeholder": "Enter your email",
+      "subscribe": "SUBSCRIBE",
+      "success": "Thank you for subscribing!",
+      "error": "Please enter a valid email address."
+    },
+    "legal": {
+      "copyright": "© {year} Hestia Cleaning Services. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service", 
+      "safety": "Safety Guidelines"
+    }
+  },
+  "ContactForm": {
+    "quickResponse": {
+      "title": "Quick Response",
+      "mobilization": {
+        "label": "Mobilization",
+        "value": "48 Hours"
+      },
+      "phone": {
+        "label": "Emergency Hotline",
+        "value": "1-800-CLEAN-NOW"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@hestiasitesolutions.com"
+      },
+      "note": "OSHA-compliant crews ready for immediate deployment across Texas."
+    }
+  },
   "CleaningServices": {
+    "metadata": {
+      "title": "Professional Cleaning Services | Hestia Site Solutions",
+      "description": "Expert construction and commercial cleaning services. OSHA-compliant crews deliver inspection-ready spaces with 24-hour mobilization. Get your quote today.",
+      "keywords": "professional cleaning services, construction cleaning, commercial cleaning, OSHA compliant, post-construction cleanup, inspection ready cleaning",
+      "openGraph": {
+        "title": "Professional Cleaning Services - Hestia Site Solutions",
+        "description": "Precision cleaning for flawless project handovers. Safety-compliant cleaning solutions for construction, commercial, and residential sites.",
+        "siteName": "Hestia Site Solutions",
+        "type": "website"
+      },
+      "twitter": {
+        "title": "Professional Cleaning Services | Hestia Site Solutions",
+        "description": "Expert construction and commercial cleaning services. OSHA-compliant crews deliver inspection-ready spaces with 24-hour mobilization."
+      }
+    },
     "hero": {
-      "title": "POST-CONSTRUCTION CLEANING SERVICES",
+      "title": "PROFESSIONAL CLEANING SERVICES",
       "subtitle": "Precision cleaning for flawless project handovers.",
-      "description": "Comprehensive, safety-compliant cleaning solutions designed for construction and renovation sites. Our trained crews deliver spotless, inspection-ready spaces — on time, every time.",
+      "description": "Comprehensive, safety-compliant cleaning solutions designed for construction, commercial, and residential sites. Our trained crews deliver spotless, inspection-ready spaces — on time, every time.",
       "stats": {
-        "mobilization": "48 HR",
-        "safety": "OSHA",
-        "inspection": "100%"
+        "mobilization": "Fast Response\n<24h",
+        "safety": "OSHA\nProtocols",
+        "inspection": "Quality Control\nSystem"
       },
       "ctaText": "REQUEST AVAILABILITY",
       "downloadText": "DOWNLOAD SERVICE SHEET"
@@ -379,9 +473,9 @@
       "title": "OVERVIEW",
       "description": "We provide full-spectrum post-construction cleaning services, including debris removal, surface detailing, and dust control, to prepare your site for client turnover or occupancy. Our crews are OSHA-trained, fully insured, and equipped with industrial-grade cleaning systems. From commercial builds to luxury residences, we ensure every surface — from floors to fixtures — meets the highest standard of cleanliness.",
       "coverage": {
-        "area1": "Greater Houston Area",
-        "area2": "East Texas",
-        "area3": "South Texas"
+        "area1": "Houston",
+        "area2": "Katy • Sugar Land",
+        "area3": "The Woodlands • Cypress"
       },
       "highlights": {
         "h1": {
@@ -432,6 +526,10 @@
       "c7": {
         "title": "Final Punch Support",
         "description": "Touch-ups before client walk-through."
+      },
+      "c8": {
+        "title": "CARPET FLOORING CLEANING",
+        "description": "Bedrooms, living rooms, office. Hot Water Extraction (HWE)."
       }
     },
     "technical": {
@@ -515,8 +613,8 @@
         }
       },
       "caseHighlight": {
-        "title": "Mini Case Highlight",
-        "description": "3-story office build – mobilized in 48 hours, completed full PCC in 5 days, passed final inspection on first review"
+        "title": "",
+        "description": ""
       }
     },
     "cta": {

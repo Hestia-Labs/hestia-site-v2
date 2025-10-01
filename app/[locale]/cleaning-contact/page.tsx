@@ -13,7 +13,7 @@ export default async function CleaningContactPage() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 pt-32">
+      <section className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white py-20 pt-48">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-purple-950/20 to-gray-900" />
         
         {/* Grid Background */}

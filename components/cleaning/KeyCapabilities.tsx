@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Trash2, Wind, Sparkles, Eye, Layers, Filter, CheckSquare } from "lucide-react";
+import { Trash2, Wind, Sparkles, Eye, Layers, Filter, CheckSquare, Home } from "lucide-react";
 
 interface Capability {
   title: string;
@@ -24,7 +24,7 @@ export default function KeyCapabilities({
   subtitle,
   capabilities,
 }: KeyCapabilitiesProps) {
-  const icons = [Trash2, Wind, Sparkles, Eye, Layers, Filter, CheckSquare];
+  const icons = [Trash2, Wind, Sparkles, Eye, Layers, Filter, CheckSquare, Home];
 
   const capabilitiesWithIcons: Capability[] = capabilities.map((cap, index) => ({
     ...cap,

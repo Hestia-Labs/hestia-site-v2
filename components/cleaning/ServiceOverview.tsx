@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { MapPin, Clock, Shield, CheckCircle2 } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 interface ServiceOverviewProps {
   title: string;

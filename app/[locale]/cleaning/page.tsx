@@ -9,15 +9,149 @@ import ProcessApproach from "@/components/cleaning/ProcessApproach";
 import SafetyCompliance from "@/components/cleaning/SafetyCompliance";
 import TransitionLink from "@/components/TransitionLink";
 import { Button } from "@/components/ui/button";
+import type { Metadata } from "next";
 
 export const runtime = "edge";
 
-export default async function CleaningServices() {
+type Props = {
+  params: { locale: string };
+};
+
+export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+  const t = await getTranslations({ locale, namespace: 'CleaningServices.metadata' });
+  
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://hestia-site-solutions.com';
+  const currentUrl = `${baseUrl}/${locale}/cleaning`;
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    authors: [{ name: 'Hestia Site Solutions' }],
+    creator: 'Hestia Site Solutions',
+    publisher: 'Hestia Site Solutions',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: currentUrl,
+      languages: {
+        'en': `${baseUrl}/en/cleaning`,
+        'es': `${baseUrl}/es/cleaning`,
+      },
+    },
+    openGraph: {
+      title: t('openGraph.title'),
+      description: t('openGraph.description'),
+      url: currentUrl,
+      siteName: t('openGraph.siteName'),
+      type: 'website',
+      locale: locale,
+      alternateLocale: locale === 'en' ? 'es' : 'en',
+      images: [
+        {
+          url: `${baseUrl}/og-cleaning-services.jpg`,
+          width: 1200,
+          height: 630,
+          alt: t('openGraph.title'),
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('twitter.title'),
+      description: t('twitter.description'),
+      creator: '@hestia_solutions',
+      images: [`${baseUrl}/og-cleaning-services.jpg`],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    verification: {
+      google: process.env.GOOGLE_VERIFICATION,
+    },
+  };
+}
+
+export default async function CleaningServices({ params: { locale } }: Props) {
   const t = await getTranslations("CleaningServices");
+  const metaT = await getTranslations({ locale, namespace: 'CleaningServices.metadata' });
+  
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://hestia-site-solutions.com';
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": metaT('openGraph.title'),
+    "description": metaT('description'),
+    "provider": {
+      "@type": "Organization",
+      "name": "Hestia Site Solutions",
+      "url": baseUrl,
+      "logo": `${baseUrl}/logo.png`,
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-XXX-XXX-XXXX",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Spanish"]
+      }
+    },
+    "serviceType": "Professional Cleaning Services",
+    "areaServed": {
+      "@type": "Place",
+      "name": "United States"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Cleaning Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Construction Cleaning",
+            "description": "Post-construction cleanup services"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Commercial Cleaning",
+            "description": "Professional commercial space cleaning"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "OSHA Compliant Cleaning",
+            "description": "Safety-compliant cleaning services"
+          }
+        }
+      ]
+    }
+  };
   
   return (
-    <div className="relative min-h-screen">
-      <Navbar invert />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <div className="relative min-h-screen">
+        <Navbar invert />
       
       <HeroSection
         title={t("hero.title")}
@@ -91,6 +225,10 @@ export default async function CleaningServices() {
           {
             title: t("capabilities.c7.title"),
             description: t("capabilities.c7.description"),
+          },
+          {
+            title: t("capabilities.c8.title"),
+            description: t("capabilities.c8.description"),
           },
         ]}
       />
@@ -186,10 +324,7 @@ export default async function CleaningServices() {
             description: t("safety.features.f4.description"),
           },
         ]}
-        caseHighlight={{
-          title: t("safety.caseHighlight.title"),
-          description: t("safety.caseHighlight.description"),
-        }}
+        caseHighlight={null}
         />
       </div>
 
@@ -209,6 +344,7 @@ export default async function CleaningServices() {
           </TransitionLink>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

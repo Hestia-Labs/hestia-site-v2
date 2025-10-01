@@ -17,6 +17,7 @@ import {
   FileText,
   Clock
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface ContactFormProps {
   title: string;
@@ -45,6 +46,7 @@ export default function ContactForm({
   projectTypes,
   timelines,
 }: ContactFormProps) {
+  const t = useTranslations('ContactForm.quickResponse');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
@@ -97,37 +99,37 @@ export default function ContactForm({
               className="lg:col-span-1"
             >
               <div className="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8 sticky top-24 shadow-2xl border border-amber-400/20">
-                <h3 className="text-2xl font-bellefair mb-6">Quick Response</h3>
+                <h3 className="text-2xl font-bellefair mb-6">{t('title')}</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-center">
                     <Clock className="w-5 h-5 text-amber-400 mr-3" />
                     <div>
-                      <div className="text-sm text-gray-400">Mobilization</div>
-                      <div className="">48 Hours</div>
+                      <div className="text-sm text-gray-400">{t('mobilization.label')}</div>
+                      <div className="">{t('mobilization.value')}</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
                     <Phone className="w-5 h-5 text-amber-400 mr-3" />
                     <div>
-                      <div className="text-sm text-gray-400">Emergency Hotline</div>
-                      <div className="">1-800-CLEAN-NOW</div>
+                      <div className="text-sm text-gray-400">{t('phone.label')}</div>
+                      <div className="">{t('phone.value')}</div>
                     </div>
                   </div>
                   
                   <div className="flex items-center">
                     <Mail className="w-5 h-5 text-amber-400 mr-3" />
                     <div>
-                      <div className="text-sm text-gray-400">Email</div>
-                      <div className=" text-sm">info@cleaningservices.com</div>
+                      <div className="text-sm text-gray-400">{t('email.label')}</div>
+                      <div className=" text-sm">{t('email.value')}</div>
                     </div>
                   </div>
                 </div>
 
                 <div className="mt-8 p-4 bg-gradient-to-r from-amber-400/10 to-yellow-500/10 border border-amber-400/30 rounded-lg">
                   <p className="text-sm text-gray-300">
-                    OSHA-compliant crews ready for immediate deployment across Texas.
+                    {t('note')}
                   </p>
                 </div>
               </div>

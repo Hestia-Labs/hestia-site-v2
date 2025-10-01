@@ -77,7 +77,14 @@
     "careers": "Carreras",
     "servicesOverview": "RESUMEN DE SERVICIOS",
     "exploreServices": "Explora nuestra gama completa de servicios",
-    "serviceMenu": "SERVICIOS"
+    "serviceMenu": "SERVICIOS",
+    "cleaning": {
+      "home": "INICIO",
+      "services": "SERVICIOS",
+      "process": "PROCESO",
+      "safety": "SEGURIDAD",
+      "getQuote": "OBTENER COTIZACIÓN"
+    }
   },
   "ServiceDescriptions": {
     "uxuiDesign": "Diseño centrado en el usuario para crear experiencias intuitivas y atractivas.",
@@ -264,13 +271,13 @@
       {
         "id": "careers",
         "title": "Carreras",
-        "email": "careers@hestialabs.io",
+        "email": "INFO@HESTIASITESOLUTIONS.COM",
         "description": "Únete a nuestro increíble equipo"
       },
       {
         "id": "press",
         "title": "Prensa",
-        "email": "press@hestialabs.io",
+        "email": "INFO@HESTIASITESOLUTIONS.COM",
         "description": "Contáctanos para consultas de medios"
       }
     ],
@@ -362,15 +369,102 @@
     "pageTitle": "Nuestro Trabajo",
     "pageSubtitle": "Una selección curada de nuestros proyectos recientes, que muestran nuestro enfoque en diseño, desarrollo y resolución de problemas creativos."
   },
+  "Footer": {
+    "companyDescription": "Especialistas de confianza en limpieza post-construcción de Texas. Cumplimiento OSHA, totalmente asegurados y listos para despliegue rápido.",
+    "quickLinks": {
+      "title": "ENLACES RÁPIDOS",
+      "home": "Inicio",
+      "services": "Servicios",
+      "process": "Proceso", 
+      "safety": "Estándares de Seguridad",
+      "quote": "Obtener Cotización"
+    },
+    "serviceAreas": {
+      "title": "ÁREAS DE SERVICIO",
+      "description": "Sirviendo el Área Metropolitana de Houston"
+    },
+    "certifications": {
+      "title": "CERTIFICACIONES",
+      "osha": {
+        "title": "Certificado OSHA",
+        "description": "Cumplimiento de Seguridad"
+      },
+      "licensed": {
+        "title": "Licenciado y Asegurado",
+        "description": "Cobertura Completa"
+      },
+      "response": {
+        "title": "Respuesta en 48 Horas",
+        "description": "Movilización Rápida"
+      }
+    },
+    "contact": {
+      "phone": "1-800-CLEAN-NOW",
+      "email": "info@hestiasitesolutions.com",
+      "hours": "Respuesta de Emergencia 24/7",
+      "areas": {
+        "houston": "Houston",
+        "suburbs": "Katy • Sugar Land",
+        "north": "The Woodlands • Cypress"
+      }
+    },
+    "newsletter": {
+      "title": "MANTENTE ACTUALIZADO",
+      "description": "Recibe las últimas actualizaciones sobre estándares de limpieza, protocolos de seguridad y ofertas especiales.",
+      "placeholder": "Ingresa tu email",
+      "subscribe": "SUSCRIBIRSE",
+      "success": "¡Gracias por suscribirte!",
+      "error": "Por favor ingresa una dirección de email válida."
+    },
+    "legal": {
+      "copyright": "© {year} Hestia Cleaning Services. Todos los derechos reservados.",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "safety": "Pautas de Seguridad"
+    }
+  },
+  "ContactForm": {
+    "quickResponse": {
+      "title": "Respuesta Rápida",
+      "mobilization": {
+        "label": "Movilización",
+        "value": "48 Horas"
+      },
+      "phone": {
+        "label": "Línea de Emergencia",
+        "value": "1-800-CLEAN-NOW"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@hestiasitesolutions.com"
+      },
+      "note": "Equipos certificados OSHA listos para despliegue inmediato en todo Texas."
+    }
+  },
   "CleaningServices": {
+    "metadata": {
+      "title": "Servicios Profesionales de Limpieza | Hestia Site Solutions",
+      "description": "Servicios expertos de limpieza para construcción y comercial. Equipos certificados OSHA entregan espacios listos para inspección con movilización en 24 horas.",
+      "keywords": "servicios profesionales de limpieza, limpieza de construcción, limpieza comercial, cumplimiento OSHA, limpieza post-construcción, limpieza lista para inspección",
+      "openGraph": {
+        "title": "Servicios Profesionales de Limpieza - Hestia Site Solutions",
+        "description": "Limpieza de precisión para entregas perfectas de proyectos. Soluciones de limpieza que cumplen con la seguridad para sitios de construcción, comerciales y residenciales.",
+        "siteName": "Hestia Site Solutions",
+        "type": "website"
+      },
+      "twitter": {
+        "title": "Servicios Profesionales de Limpieza | Hestia Site Solutions",
+        "description": "Servicios expertos de limpieza para construcción y comercial. Equipos certificados OSHA entregan espacios listos para inspección con movilización en 24 horas."
+      }
+    },
     "hero": {
-      "title": "SERVICIOS DE LIMPIEZA POST-CONSTRUCCIÓN",
+      "title": "SERVICIOS PROFESIONALES DE LIMPIEZA",
       "subtitle": "Limpieza de precisión para entregas de proyectos impecables.",
-      "description": "Soluciones de limpieza integrales y conformes con las normas de seguridad, diseñadas para sitios de construcción y renovación. Nuestros equipos capacitados entregan espacios impecables, listos para inspección — a tiempo, siempre.",
+      "description": "Soluciones de limpieza integrales y conformes con las normas de seguridad, diseñadas para sitios de construcción, comerciales y residenciales. Nuestros equipos capacitados entregan espacios impecables, listos para inspección — a tiempo, siempre.",
       "stats": {
-        "mobilization": "48 HR",
-        "safety": "OSHA",
-        "inspection": "100%"
+        "mobilization": "Respuesta Rápida\n<24H",
+        "safety": "Protocolos\nOSHA",
+        "inspection": "Sistema de\nControl de Calidad"
       },
       "ctaText": "SOLICITAR DISPONIBILIDAD",
       "downloadText": "DESCARGAR HOJA DE SERVICIO"
@@ -379,9 +473,9 @@
       "title": "RESUMEN",
       "description": "Proporcionamos servicios completos de limpieza post-construcción, incluyendo eliminación de escombros, detallado de superficies y control de polvo, para preparar su sitio para la entrega al cliente o la ocupación. Nuestros equipos están capacitados en OSHA, totalmente asegurados y equipados con sistemas de limpieza de grado industrial. Desde construcciones comerciales hasta residencias de lujo, garantizamos que cada superficie — desde pisos hasta accesorios — cumpla con el más alto estándar de limpieza.",
       "coverage": {
-        "area1": "Área del Gran Houston",
-        "area2": "Este de Texas",
-        "area3": "Sur de Texas"
+        "area1": "Houston",
+        "area2": "Katy • Sugar Land",
+        "area3": "The Woodlands • Cypress"
       },
       "highlights": {
         "h1": {
@@ -432,6 +526,10 @@
       "c7": {
         "title": "Soporte de Toque Final",
         "description": "Retoques antes del recorrido con el cliente."
+      },
+      "c8": {
+        "title": "Lipieza de Pisos y de Alfombras",
+        "description": "Habitaciones, salas de estar, oficina. Extracción con Agua Caliente (HWE)."
       }
     },
     "technical": {
@@ -515,8 +613,8 @@
         }
       },
       "caseHighlight": {
-        "title": "Mini Caso Destacado",
-        "description": "Edificio de oficinas de 3 pisos – movilizado en 48 horas, completó limpieza completa post-construcción en 5 días, pasó la inspección final en la primera revisión"
+        "title": "",
+        "description": ""
       }
     },
     "cta": {

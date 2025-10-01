@@ -15,7 +15,7 @@ interface SafetyComplianceProps {
   caseHighlight: {
     title: string;
     description: string;
-  };
+  } | null;
 }
 
 export default function SafetyCompliance({
@@ -73,25 +73,27 @@ export default function SafetyCompliance({
           </div>
 
           {/* Mini Case Highlight */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="bg-gradient-to-r from-amber-400/15 to-yellow-500/15 border-2 border-amber-400/30 rounded-2xl p-8 hover:border-amber-400/50 transition-all shadow-xl shadow-amber-400/10"
-          >
-            <div className="flex items-start">
-              <Award className="w-8 h-8 text-amber-400 mr-4 flex-shrink-0 mt-1" />
-              <div>
-                <h3 className="text-2xl font-bellefair mb-3 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">
-                  {caseHighlight.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {caseHighlight.description}
-                </p>
+          {caseHighlight && caseHighlight.title && caseHighlight.description && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.8 }}
+              className="bg-gradient-to-r from-amber-400/15 to-yellow-500/15 border-2 border-amber-400/30 rounded-2xl p-8 hover:border-amber-400/50 transition-all shadow-xl shadow-amber-400/10"
+            >
+              <div className="flex items-start">
+                <Award className="w-8 h-8 text-amber-400 mr-4 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bellefair mb-3 text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-500">
+                    {caseHighlight.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {caseHighlight.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          )}
         </motion.div>
       </div>
     </section>
