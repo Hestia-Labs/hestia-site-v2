@@ -38,13 +38,15 @@ const TransitionScreen: React.FC<TransitionScreenProps> = ({
     <AnimatePresence onExitComplete={handleExitComplete}>
       {shouldRender && (
         <motion.div 
-          className="fixed inset-0 z-50 bg-black flex items-center justify-center"
+          className="fixed inset-0 z-50 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 flex items-center justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
         >
-          <div className="relative w-[335px] h-[470px]">
+          {/* Background gradient overlay - same as hero section */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-950/30 via-purple-950/20 to-gray-900" />
+          <div className="relative w-[335px] h-[470px] z-10">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
               viewBox="0 0 700 1200" 

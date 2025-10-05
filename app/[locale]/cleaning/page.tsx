@@ -14,10 +14,11 @@ import type { Metadata } from "next";
 export const runtime = "edge";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
-export async function generateMetadata({ params: { locale } }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'CleaningServices.metadata' });
   
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://hestia-site-solutions.com';
@@ -84,7 +85,8 @@ export async function generateMetadata({ params: { locale } }: Props): Promise<M
   };
 }
 
-export default async function CleaningServices({ params: { locale } }: Props) {
+export default async function CleaningServices({ params }: Props) {
+  const { locale } = await params;
   const t = await getTranslations("CleaningServices");
   const metaT = await getTranslations({ locale, namespace: 'CleaningServices.metadata' });
   
