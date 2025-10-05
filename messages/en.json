@@ -77,7 +77,14 @@
     "careers": "Careers",
     "servicesOverview": "SERVICES OVERVIEW",
     "exploreServices": "Explore our full range of services",
-    "serviceMenu": "SERVICES"
+    "serviceMenu": "SERVICES",
+    "cleaning": {
+      "home": "HOME",
+      "services": "SERVICES",
+      "process": "PROCESS",
+      "safety": "SAFETY",
+      "getQuote": "GET QUOTE"
+    }
   },
   "ServiceDescriptions": {
     "uxuiDesign": "User-centered design to create intuitive and engaging experiences.",
@@ -264,13 +271,13 @@
       {
         "id": "careers",
         "title": "Careers",
-        "email": "careers@hestialabs.io",
+        "email": "INFO@HESTIASITESOLUTIONS.COM",
         "description": "Join our amazing team"
       },
       {
         "id": "press",
         "title": "Press",
-        "email": "press@hestialabs.io",
+        "email": "INFO@HESTIASITESOLUTIONS.COM",
         "description": "Get in touch for media inquiries"
       }
     ],
@@ -361,6 +368,294 @@
       "description": "We are always looking for talented individuals who are passionate about creating innovative solutions.",
       "buttonText": "Contact Us"
     }
+  },
+  "Footer": {
+    "companyDescription": "Texas' trusted post-construction cleaning specialists. OSHA-compliant, fully insured, and ready for rapid deployment.",
+    "quickLinks": {
+      "title": "QUICK LINKS",
+      "home": "Home",
+      "services": "Services", 
+      "process": "Process",
+      "safety": "Safety Standards",
+      "quote": "Get Quote"
+    },
+    "serviceAreas": {
+      "title": "SERVICE AREAS",
+      "description": "Serving the Greater Houston Area"
+    },
+    "certifications": {
+      "title": "CERTIFICATIONS",
+      "osha": {
+        "title": "OSHA Certified",
+        "description": "Safety Compliant"
+      },
+      "licensed": {
+        "title": "Licensed & Insured", 
+        "description": "Full Coverage"
+      },
+      "response": {
+        "title": "48 Hour Response",
+        "description": "Quick Mobilization"
+      }
+    },
+    "contact": {
+      "phone": "1-800-CLEAN-NOW",
+      "email": "info@hestiasitesolutions.com",
+      "hours": "24/7 Emergency Response",
+      "areas": {
+        "houston": "Houston",
+        "suburbs": "Katy • Sugar Land", 
+        "north": "The Woodlands • Cypress"
+      }
+    },
+    "newsletter": {
+      "title": "STAY UPDATED",
+      "description": "Get the latest updates on cleaning standards, safety protocols, and special offers.",
+      "placeholder": "Enter your email",
+      "subscribe": "SUBSCRIBE",
+      "success": "Thank you for subscribing!",
+      "error": "Please enter a valid email address."
+    },
+    "legal": {
+      "copyright": "© {year} Hestia Cleaning Services. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service", 
+      "safety": "Safety Guidelines"
+    }
+  },
+  "ContactForm": {
+    "quickResponse": {
+      "title": "Quick Response",
+      "mobilization": {
+        "label": "Mobilization",
+        "value": "48 Hours"
+      },
+      "phone": {
+        "label": "Emergency Hotline",
+        "value": "1-800-CLEAN-NOW"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@hestiasitesolutions.com"
+      },
+      "note": "OSHA-compliant crews ready for immediate deployment across Texas."
+    }
+  },
+  "CleaningServices": {
+    "metadata": {
+      "title": "Professional Cleaning Services | Hestia Site Solutions",
+      "description": "Expert construction and commercial cleaning services. OSHA-compliant crews deliver inspection-ready spaces with 24-hour mobilization. Get your quote today.",
+      "keywords": "professional cleaning services, construction cleaning, commercial cleaning, OSHA compliant, post-construction cleanup, inspection ready cleaning",
+      "openGraph": {
+        "title": "Professional Cleaning Services - Hestia Site Solutions",
+        "description": "Precision cleaning for flawless project handovers. Safety-compliant cleaning solutions for construction, commercial, and residential sites.",
+        "siteName": "Hestia Site Solutions",
+        "type": "website"
+      },
+      "twitter": {
+        "title": "Professional Cleaning Services | Hestia Site Solutions",
+        "description": "Expert construction and commercial cleaning services. OSHA-compliant crews deliver inspection-ready spaces with 24-hour mobilization."
+      }
+    },
+    "hero": {
+      "title": "PROFESSIONAL CLEANING SERVICES",
+      "subtitle": "Precision cleaning for flawless project handovers.",
+      "description": "Comprehensive, safety-compliant cleaning solutions designed for construction, commercial, and residential sites. Our trained crews deliver spotless, inspection-ready spaces — on time, every time.",
+      "stats": {
+        "mobilization": "Fast Response\n<24h",
+        "safety": "OSHA\nProtocols",
+        "inspection": "Quality Control\nSystem"
+      },
+      "ctaText": "REQUEST AVAILABILITY",
+      "downloadText": "DOWNLOAD SERVICE SHEET"
+    },
+    "overview": {
+      "title": "OVERVIEW",
+      "description": "We provide full-spectrum post-construction cleaning services, including debris removal, surface detailing, and dust control, to prepare your site for client turnover or occupancy. Our crews are OSHA-trained, fully insured, and equipped with industrial-grade cleaning systems. From commercial builds to luxury residences, we ensure every surface — from floors to fixtures — meets the highest standard of cleanliness.",
+      "coverage": {
+        "area1": "Houston",
+        "area2": "Katy • Sugar Land",
+        "area3": "The Woodlands • Cypress"
+      },
+      "highlights": {
+        "h1": {
+          "title": "OSHA-Compliant Safety Practices",
+          "description": "Industry Standards"
+        },
+        "h2": {
+          "title": "Rapid Mobilization",
+          "description": "48 Hours"
+        },
+        "h3": {
+          "title": "Dust-Free Guarantee",
+          "description": "Final Inspection Ready"
+        },
+        "h4": {
+          "title": "Expert-Led Crews",
+          "description": "Experienced Supervisors"
+        }
+      }
+    },
+    "capabilities": {
+      "title": "KEY CAPABILITIES",
+      "subtitle": "Comprehensive cleaning package designed for construction environments",
+      "c1": {
+        "title": "Debris Removal",
+        "description": "All waste, scrap, and packaging removed."
+      },
+      "c2": {
+        "title": "Fine Dust Removal",
+        "description": "HEPA-filter vacuums and multi-pass wipe-downs."
+      },
+      "c3": {
+        "title": "Surface Detailing",
+        "description": "Countertops, cabinetry, fixtures polished to a shine."
+      },
+      "c4": {
+        "title": "Window & Glass Cleaning",
+        "description": "Interior & exterior streak-free finish."
+      },
+      "c5": {
+        "title": "Floor Finishing",
+        "description": "Sweep, mop, polish, and seal as required."
+      },
+      "c6": {
+        "title": "High & Low Detailing",
+        "description": "Vents, light fixtures, baseboards, and trim."
+      },
+      "c7": {
+        "title": "Final Punch Support",
+        "description": "Touch-ups before client walk-through."
+      },
+      "c8": {
+        "title": "CARPET FLOORING CLEANING",
+        "description": "Bedrooms, living rooms, office. Hot Water Extraction (HWE)."
+      }
+    },
+    "technical": {
+      "title": "TECHNICAL HIGHLIGHTS",
+      "specs": {
+        "mobilization": {
+          "feature": "Mobilization",
+          "detail": "48 Hours"
+        },
+        "crew": {
+          "feature": "Crew Size",
+          "detail": "2–12 (scalable)"
+        },
+        "equipment": {
+          "feature": "Equipment",
+          "detail": "HEPA Vacuums, Industrial Scrubbers, Lifts"
+        },
+        "safety": {
+          "feature": "Safety",
+          "detail": "OSHA-Compliant PPE, Fall Protection"
+        },
+        "quality": {
+          "feature": "Quality Control",
+          "detail": "Supervisor Checklist, Client Sign-Off"
+        }
+      },
+      "applications": {
+        "app1": "Final project turnover",
+        "app2": "Renovation cleanup",
+        "app3": "Pre-inspection preparation",
+        "app4": "Occupancy readiness",
+        "app5": "Tenant improvements"
+      }
+    },
+    "process": {
+      "title": "OUR STREAMLINED APPROACH",
+      "step1": {
+        "title": "Scope & Site Alignment",
+        "description": "Review blueprints, schedule, and safety requirements."
+      },
+      "step2": {
+        "title": "Documentation Review",
+        "description": "Insurance, safety certifications, and compliance checks."
+      },
+      "step3": {
+        "title": "Mobilize Crews",
+        "description": "Onsite setup within 48 hours."
+      },
+      "step4": {
+        "title": "Cleaning Execution",
+        "description": "Multi-stage process, from rough clean to fine detail."
+      },
+      "step5": {
+        "title": "Quality Assurance Walkthrough",
+        "description": "Joint inspection with site manager."
+      },
+      "step6": {
+        "title": "Post-Job Report",
+        "description": "Before/after documentation and sign-off."
+      }
+    },
+    "safety": {
+      "title": "SAFETY & COMPLIANCE",
+      "description": "Our team follows OSHA standards for construction site safety, uses eco-friendly cleaning solutions, and maintains full insurance coverage. All crew members undergo site-specific safety training.",
+      "features": {
+        "f1": {
+          "title": "OSHA Standards",
+          "description": "Full compliance"
+        },
+        "f2": {
+          "title": "Certified Teams",
+          "description": "Trained professionals"
+        },
+        "f3": {
+          "title": "Eco-Friendly",
+          "description": "Green solutions"
+        },
+        "f4": {
+          "title": "Fully Insured",
+          "description": "Complete coverage"
+        }
+      },
+      "caseHighlight": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "cta": {
+      "title": "Ready for Spotless Results?",
+      "description": "Get your construction site inspection-ready with our professional cleaning services.",
+      "buttonText": "Schedule Your Service"
+    }
+  },
+  "CleaningContact": {
+    "hero": {
+      "title": "REQUEST CLEANING SERVICES",
+      "subtitle": "48-hour mobilization for your post-construction cleaning needs"
+    },
+    "form": {
+      "title": "Get Your Free Quote",
+      "subtitle": "Tell us about your project and we'll provide a customized solution",
+      "labels": {
+        "fullName": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "company": "Company Name",
+        "projectType": "Project Type",
+        "location": "Project Location",
+        "timeline": "Timeline",
+        "squareFootage": "Square Footage",
+        "details": "Project Details",
+        "submitButton": "Request Quote",
+        "submitting": "Submitting..."
+      },
+      "projectTypes": {
+        "commercial": "Commercial Build",
+        "residential": "Residential",
+        "renovation": "Renovation",
+        "industrial": "Industrial"
+      },
+      "timelines": {
+        "immediate": "Immediate",
+        "week": "This Week",
+        "month": "This Month",
+        "planning": "Planning"
+      }
+    }
   }
-  
 } 

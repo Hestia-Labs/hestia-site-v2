@@ -48,7 +48,7 @@ export default function ServiceProcess({ processSteps }: ServiceProcessProps) {
                 {/* Bullet Point */}
                 <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-10 h-10 flex items-center justify-center">
                   <div className="w-10 h-10 rounded-full bg-background border-2 border-primary z-10 flex items-center justify-center">
-                    <span className="font-bellefair font-bold text-primary">
+                    <span className="font-bellefair  text-primary">
                       {index + 1}
                     </span>
                   </div>

@@ -77,7 +77,14 @@
     "careers": "Carreras",
     "servicesOverview": "RESUMEN DE SERVICIOS",
     "exploreServices": "Explora nuestra gama completa de servicios",
-    "serviceMenu": "SERVICIOS"
+    "serviceMenu": "SERVICIOS",
+    "cleaning": {
+      "home": "INICIO",
+      "services": "SERVICIOS",
+      "process": "PROCESO",
+      "safety": "SEGURIDAD",
+      "getQuote": "OBTENER COTIZACIÓN"
+    }
   },
   "ServiceDescriptions": {
     "uxuiDesign": "Diseño centrado en el usuario para crear experiencias intuitivas y atractivas.",
@@ -264,13 +271,13 @@
       {
         "id": "careers",
         "title": "Carreras",
-        "email": "careers@hestialabs.io",
+        "email": "INFO@HESTIASITESOLUTIONS.COM",
         "description": "Únete a nuestro increíble equipo"
       },
       {
         "id": "press",
         "title": "Prensa",
-        "email": "press@hestialabs.io",
+        "email": "INFO@HESTIASITESOLUTIONS.COM",
         "description": "Contáctanos para consultas de medios"
       }
     ],
@@ -361,5 +368,294 @@
   "WorkPage": {
     "pageTitle": "Nuestro Trabajo",
     "pageSubtitle": "Una selección curada de nuestros proyectos recientes, que muestran nuestro enfoque en diseño, desarrollo y resolución de problemas creativos."
+  },
+  "Footer": {
+    "companyDescription": "Especialistas de confianza en limpieza post-construcción de Texas. Cumplimiento OSHA, totalmente asegurados y listos para despliegue rápido.",
+    "quickLinks": {
+      "title": "ENLACES RÁPIDOS",
+      "home": "Inicio",
+      "services": "Servicios",
+      "process": "Proceso", 
+      "safety": "Estándares de Seguridad",
+      "quote": "Obtener Cotización"
+    },
+    "serviceAreas": {
+      "title": "ÁREAS DE SERVICIO",
+      "description": "Sirviendo el Área Metropolitana de Houston"
+    },
+    "certifications": {
+      "title": "CERTIFICACIONES",
+      "osha": {
+        "title": "Certificado OSHA",
+        "description": "Cumplimiento de Seguridad"
+      },
+      "licensed": {
+        "title": "Licenciado y Asegurado",
+        "description": "Cobertura Completa"
+      },
+      "response": {
+        "title": "Respuesta en 48 Horas",
+        "description": "Movilización Rápida"
+      }
+    },
+    "contact": {
+      "phone": "1-800-CLEAN-NOW",
+      "email": "info@hestiasitesolutions.com",
+      "hours": "Respuesta de Emergencia 24/7",
+      "areas": {
+        "houston": "Houston",
+        "suburbs": "Katy • Sugar Land",
+        "north": "The Woodlands • Cypress"
+      }
+    },
+    "newsletter": {
+      "title": "MANTENTE ACTUALIZADO",
+      "description": "Recibe las últimas actualizaciones sobre estándares de limpieza, protocolos de seguridad y ofertas especiales.",
+      "placeholder": "Ingresa tu email",
+      "subscribe": "SUSCRIBIRSE",
+      "success": "¡Gracias por suscribirte!",
+      "error": "Por favor ingresa una dirección de email válida."
+    },
+    "legal": {
+      "copyright": "© {year} Hestia Cleaning Services. Todos los derechos reservados.",
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "safety": "Pautas de Seguridad"
+    }
+  },
+  "ContactForm": {
+    "quickResponse": {
+      "title": "Respuesta Rápida",
+      "mobilization": {
+        "label": "Movilización",
+        "value": "48 Horas"
+      },
+      "phone": {
+        "label": "Línea de Emergencia",
+        "value": "1-800-CLEAN-NOW"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@hestiasitesolutions.com"
+      },
+      "note": "Equipos certificados OSHA listos para despliegue inmediato en todo Texas."
+    }
+  },
+  "CleaningServices": {
+    "metadata": {
+      "title": "Servicios Profesionales de Limpieza | Hestia Site Solutions",
+      "description": "Servicios expertos de limpieza para construcción y comercial. Equipos certificados OSHA entregan espacios listos para inspección con movilización en 24 horas.",
+      "keywords": "servicios profesionales de limpieza, limpieza de construcción, limpieza comercial, cumplimiento OSHA, limpieza post-construcción, limpieza lista para inspección",
+      "openGraph": {
+        "title": "Servicios Profesionales de Limpieza - Hestia Site Solutions",
+        "description": "Limpieza de precisión para entregas perfectas de proyectos. Soluciones de limpieza que cumplen con la seguridad para sitios de construcción, comerciales y residenciales.",
+        "siteName": "Hestia Site Solutions",
+        "type": "website"
+      },
+      "twitter": {
+        "title": "Servicios Profesionales de Limpieza | Hestia Site Solutions",
+        "description": "Servicios expertos de limpieza para construcción y comercial. Equipos certificados OSHA entregan espacios listos para inspección con movilización en 24 horas."
+      }
+    },
+    "hero": {
+      "title": "SERVICIOS PROFESIONALES DE LIMPIEZA",
+      "subtitle": "Limpieza de precisión para entregas de proyectos impecables.",
+      "description": "Soluciones de limpieza integrales y conformes con las normas de seguridad, diseñadas para sitios de construcción, comerciales y residenciales. Nuestros equipos capacitados entregan espacios impecables, listos para inspección — a tiempo, siempre.",
+      "stats": {
+        "mobilization": "Respuesta Rápida\n<24H",
+        "safety": "Protocolos\nOSHA",
+        "inspection": "Sistema de\nControl de Calidad"
+      },
+      "ctaText": "SOLICITAR DISPONIBILIDAD",
+      "downloadText": "DESCARGAR HOJA DE SERVICIO"
+    },
+    "overview": {
+      "title": "RESUMEN",
+      "description": "Proporcionamos servicios completos de limpieza post-construcción, incluyendo eliminación de escombros, detallado de superficies y control de polvo, para preparar su sitio para la entrega al cliente o la ocupación. Nuestros equipos están capacitados en OSHA, totalmente asegurados y equipados con sistemas de limpieza de grado industrial. Desde construcciones comerciales hasta residencias de lujo, garantizamos que cada superficie — desde pisos hasta accesorios — cumpla con el más alto estándar de limpieza.",
+      "coverage": {
+        "area1": "Houston",
+        "area2": "Katy • Sugar Land",
+        "area3": "The Woodlands • Cypress"
+      },
+      "highlights": {
+        "h1": {
+          "title": "Prácticas de Seguridad Conforme a OSHA",
+          "description": "Estándares de la Industria"
+        },
+        "h2": {
+          "title": "Movilización Rápida",
+          "description": "48 Horas"
+        },
+        "h3": {
+          "title": "Garantía Libre de Polvo",
+          "description": "Listo para Inspección Final"
+        },
+        "h4": {
+          "title": "Equipos Dirigidos por Expertos",
+          "description": "Supervisores Experimentados"
+        }
+      }
+    },
+    "capabilities": {
+      "title": "CAPACIDADES CLAVE",
+      "subtitle": "Paquete de limpieza integral diseñado para entornos de construcción",
+      "c1": {
+        "title": "Eliminación de Escombros",
+        "description": "Todos los residuos, chatarra y embalaje eliminados."
+      },
+      "c2": {
+        "title": "Eliminación de Polvo Fino",
+        "description": "Aspiradoras con filtro HEPA y limpiezas múltiples."
+      },
+      "c3": {
+        "title": "Detallado de Superficies",
+        "description": "Encimeras, gabinetes, accesorios pulidos hasta brillar."
+      },
+      "c4": {
+        "title": "Limpieza de Ventanas y Vidrios",
+        "description": "Acabado sin rayas interior y exterior."
+      },
+      "c5": {
+        "title": "Acabado de Pisos",
+        "description": "Barrer, trapear, pulir y sellar según se requiera."
+      },
+      "c6": {
+        "title": "Detallado Alto y Bajo",
+        "description": "Ventilaciones, accesorios de iluminación, zócalos y molduras."
+      },
+      "c7": {
+        "title": "Soporte de Toque Final",
+        "description": "Retoques antes del recorrido con el cliente."
+      },
+      "c8": {
+        "title": "Lipieza de Pisos y de Alfombras",
+        "description": "Habitaciones, salas de estar, oficina. Extracción con Agua Caliente (HWE)."
+      }
+    },
+    "technical": {
+      "title": "ASPECTOS TÉCNICOS DESTACADOS",
+      "specs": {
+        "mobilization": {
+          "feature": "Movilización",
+          "detail": "48 Horas"
+        },
+        "crew": {
+          "feature": "Tamaño del Equipo",
+          "detail": "2–12 (escalable)"
+        },
+        "equipment": {
+          "feature": "Equipamiento",
+          "detail": "Aspiradoras HEPA, Fregadoras Industriales, Elevadores"
+        },
+        "safety": {
+          "feature": "Seguridad",
+          "detail": "EPP Conforme a OSHA, Protección contra Caídas"
+        },
+        "quality": {
+          "feature": "Control de Calidad",
+          "detail": "Lista de Verificación del Supervisor, Aprobación del Cliente"
+        }
+      },
+      "applications": {
+        "app1": "Entrega final del proyecto",
+        "app2": "Limpieza de renovación",
+        "app3": "Preparación previa a la inspección",
+        "app4": "Preparación para ocupación",
+        "app5": "Mejoras para inquilinos"
+      }
+    },
+    "process": {
+      "title": "NUESTRO ENFOQUE SIMPLIFICADO",
+      "step1": {
+        "title": "Alcance y Alineación del Sitio",
+        "description": "Revisar planos, cronograma y requisitos de seguridad."
+      },
+      "step2": {
+        "title": "Revisión de Documentación",
+        "description": "Seguros, certificaciones de seguridad y verificaciones de cumplimiento."
+      },
+      "step3": {
+        "title": "Movilizar Equipos",
+        "description": "Instalación en el sitio dentro de 48 horas."
+      },
+      "step4": {
+        "title": "Ejecución de Limpieza",
+        "description": "Proceso de múltiples etapas, desde limpieza gruesa hasta detalles finos."
+      },
+      "step5": {
+        "title": "Recorrido de Garantía de Calidad",
+        "description": "Inspección conjunta con el gerente del sitio."
+      },
+      "step6": {
+        "title": "Informe Post-Trabajo",
+        "description": "Documentación antes/después y aprobación."
+      }
+    },
+    "safety": {
+      "title": "SEGURIDAD Y CUMPLIMIENTO",
+      "description": "Nuestro equipo sigue los estándares de OSHA para la seguridad en sitios de construcción, utiliza soluciones de limpieza ecológicas y mantiene cobertura de seguro completa. Todos los miembros del equipo reciben capacitación de seguridad específica del sitio.",
+      "features": {
+        "f1": {
+          "title": "Estándares OSHA",
+          "description": "Cumplimiento total"
+        },
+        "f2": {
+          "title": "Equipos Certificados",
+          "description": "Profesionales capacitados"
+        },
+        "f3": {
+          "title": "Ecológico",
+          "description": "Soluciones verdes"
+        },
+        "f4": {
+          "title": "Totalmente Asegurado",
+          "description": "Cobertura completa"
+        }
+      },
+      "caseHighlight": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "cta": {
+      "title": "¿Listo para Resultados Impecables?",
+      "description": "Prepara tu sitio de construcción para la inspección con nuestros servicios profesionales de limpieza.",
+      "buttonText": "Programa Tu Servicio"
+    }
+  },
+  "CleaningContact": {
+    "hero": {
+      "title": "SOLICITA SERVICIOS DE LIMPIEZA",
+      "subtitle": "Movilización en 48 horas para tus necesidades de limpieza post-construcción"
+    },
+    "form": {
+      "title": "Obtén Tu Cotización Gratuita",
+      "subtitle": "Cuéntanos sobre tu proyecto y te proporcionaremos una solución personalizada",
+      "labels": {
+        "fullName": "Nombre Completo",
+        "email": "Correo Electrónico",
+        "phone": "Número de Teléfono",
+        "company": "Nombre de la Empresa",
+        "projectType": "Tipo de Proyecto",
+        "location": "Ubicación del Proyecto",
+        "timeline": "Cronograma",
+        "squareFootage": "Pies Cuadrados",
+        "details": "Detalles del Proyecto",
+        "submitButton": "Solicitar Cotización",
+        "submitting": "Enviando..."
+      },
+      "projectTypes": {
+        "commercial": "Construcción Comercial",
+        "residential": "Residencial",
+        "renovation": "Renovación",
+        "industrial": "Industrial"
+      },
+      "timelines": {
+        "immediate": "Inmediato",
+        "week": "Esta Semana",
+        "month": "Este Mes",
+        "planning": "Planificación"
+      }
+    }
   }
 } 
