@@ -70,10 +70,10 @@ const Logo: React.FC<LogoProps> = ({
             x="287" 
             y="405" 
             fill={inverted ? '#fff' : '#000'}
+            className="font-bellefair"
             style={{ 
               fontSize: '62px', 
-              fontFamily: 'Arial, sans-serif', 
-              fontWeight: '500',
+              
               letterSpacing: '8px',
               textAnchor: 'middle'
             }}
@@ -85,9 +85,9 @@ const Logo: React.FC<LogoProps> = ({
             x="287" 
             y="460" 
             fill={inverted ? '#fff' : '#000'}
+            className="font-bellefair"
             style={{ 
-              fontSize: '30px', 
-              fontFamily: 'Arial, sans-serif', 
+              fontSize: '50px', 
               fontWeight: '300',
               letterSpacing: '4px',
               textAnchor: 'middle',

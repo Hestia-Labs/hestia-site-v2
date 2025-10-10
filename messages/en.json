@@ -369,8 +369,8 @@
       "buttonText": "Contact Us"
     }
   },
-  "Footer": {
-    "companyDescription": "Texas' trusted post-construction cleaning specialists. OSHA-compliant, fully insured, and ready for rapid deployment.",
+  "CleaningFooter": {
+    "companyDescription": "Texas' trusted professional cleaning specialists. OSHA-compliant, fully insured, and ready for rapid deployment.",
     "quickLinks": {
       "title": "QUICK LINKS",
       "home": "Home",
@@ -399,13 +399,15 @@
       }
     },
     "contact": {
-      "phone": "1-800-CLEAN-NOW",
+      "phone": "+1 (832) 205-8943",
       "email": "info@hestiasitesolutions.com",
       "hours": "24/7 Emergency Response",
       "areas": {
         "houston": "Houston",
-        "suburbs": "Katy • Sugar Land", 
-        "north": "The Woodlands • Cypress"
+        "katy": "Katy",
+        "sugarLand": "Sugar Land",
+        "woodlands": "The Woodlands",
+        "cypress": "Cypress"
       }
     },
     "newsletter": {
@@ -432,7 +434,7 @@
       },
       "phone": {
         "label": "Emergency Hotline",
-        "value": "1-800-CLEAN-NOW"
+        "value": "+1 (832) 205-8943"
       },
       "email": {
         "label": "Email",
@@ -445,7 +447,7 @@
     "metadata": {
       "title": "Professional Cleaning Services | Hestia Site Solutions",
       "description": "Expert construction and commercial cleaning services. OSHA-compliant crews deliver inspection-ready spaces with 24-hour mobilization. Get your quote today.",
-      "keywords": "professional cleaning services, construction cleaning, commercial cleaning, OSHA compliant, post-construction cleanup, inspection ready cleaning",
+      "keywords": "professional cleaning services, construction cleaning, commercial cleaning, OSHA compliant, residential cleaning, inspection ready cleaning",
       "openGraph": {
         "title": "Professional Cleaning Services - Hestia Site Solutions",
         "description": "Precision cleaning for flawless project handovers. Safety-compliant cleaning solutions for construction, commercial, and residential sites.",
@@ -463,7 +465,7 @@
       "description": "Comprehensive, safety-compliant cleaning solutions designed for construction, commercial, and residential sites. Our trained crews deliver spotless, inspection-ready spaces — on time, every time.",
       "stats": {
         "mobilization": "Fast Response\n<24h",
-        "safety": "OSHA\nProtocols",
+        "safety": "OSHA\nCompliant",
         "inspection": "Quality Control\nSystem"
       },
       "ctaText": "REQUEST AVAILABILITY",
@@ -471,7 +473,7 @@
     },
     "overview": {
       "title": "OVERVIEW",
-      "description": "We provide full-spectrum post-construction cleaning services, including debris removal, surface detailing, and dust control, to prepare your site for client turnover or occupancy. Our crews are OSHA-trained, fully insured, and equipped with industrial-grade cleaning systems. From commercial builds to luxury residences, we ensure every surface — from floors to fixtures — meets the highest standard of cleanliness.",
+      "description": "We provide full-spectrum professional cleaning services, including debris removal, surface detailing, and dust control, to prepare your site for client turnover or occupancy. Our crews are OSHA-trained, fully insured, and equipped with industrial-grade cleaning systems. From commercial builds to luxury residences, we ensure every surface — from floors to fixtures — meets the highest standard of cleanliness.",
       "coverage": {
         "area1": "Houston",
         "area2": "Katy • Sugar Land",
@@ -528,7 +530,7 @@
         "description": "Touch-ups before client walk-through."
       },
       "c8": {
-        "title": "CARPET FLOORING CLEANING",
+        "title": "CARPET CLEANING",
         "description": "Bedrooms, living rooms, office. Hot Water Extraction (HWE)."
       }
     },
@@ -626,7 +628,7 @@
   "CleaningContact": {
     "hero": {
       "title": "REQUEST CLEANING SERVICES",
-      "subtitle": "48-hour mobilization for your post-construction cleaning needs"
+      "subtitle": "48-hour mobilization for your professional cleaning needs"
     },
     "form": {
       "title": "Get Your Free Quote",
@@ -645,10 +647,11 @@
         "submitting": "Submitting..."
       },
       "projectTypes": {
-        "commercial": "Commercial Build",
-        "residential": "Residential",
-        "renovation": "Renovation",
-        "industrial": "Industrial"
+        "postConstruction": "Post-Construction Cleaning",
+        "residential": "Residential Cleaning",
+        "commercial": "Commercial Cleaning",
+        "junkHauling": "Junk Hauling & Disposal",
+        "specialty": "Specialty / Other"
       },
       "timelines": {
         "immediate": "Immediate",

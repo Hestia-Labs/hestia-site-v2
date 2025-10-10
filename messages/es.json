@@ -369,8 +369,8 @@
     "pageTitle": "Nuestro Trabajo",
     "pageSubtitle": "Una selección curada de nuestros proyectos recientes, que muestran nuestro enfoque en diseño, desarrollo y resolución de problemas creativos."
   },
-  "Footer": {
-    "companyDescription": "Especialistas de confianza en limpieza post-construcción de Texas. Cumplimiento OSHA, totalmente asegurados y listos para despliegue rápido.",
+  "CleaningFooter": {
+    "companyDescription": "Especialistas de confianza en limpieza profesional de Texas. Cumplimiento OSHA, totalmente asegurados y listos para despliegue rápido.",
     "quickLinks": {
       "title": "ENLACES RÁPIDOS",
       "home": "Inicio",
@@ -399,13 +399,15 @@
       }
     },
     "contact": {
-      "phone": "1-800-CLEAN-NOW",
+      "phone": "+1 (832) 205-8943",
       "email": "info@hestiasitesolutions.com",
       "hours": "Respuesta de Emergencia 24/7",
       "areas": {
         "houston": "Houston",
-        "suburbs": "Katy • Sugar Land",
-        "north": "The Woodlands • Cypress"
+        "katy": "Katy",
+        "sugarLand": "Sugar Land",
+        "woodlands": "The Woodlands",
+        "cypress": "Cypress"
       }
     },
     "newsletter": {
@@ -432,7 +434,7 @@
       },
       "phone": {
         "label": "Línea de Emergencia",
-        "value": "1-800-CLEAN-NOW"
+        "value": "+1 (832) 205-8943"
       },
       "email": {
         "label": "Email",
@@ -445,7 +447,7 @@
     "metadata": {
       "title": "Servicios Profesionales de Limpieza | Hestia Site Solutions",
       "description": "Servicios expertos de limpieza para construcción y comercial. Equipos certificados OSHA entregan espacios listos para inspección con movilización en 24 horas.",
-      "keywords": "servicios profesionales de limpieza, limpieza de construcción, limpieza comercial, cumplimiento OSHA, limpieza post-construcción, limpieza lista para inspección",
+      "keywords": "servicios profesionales de limpieza, limpieza de construcción, limpieza comercial, cumplimiento OSHA, limpieza residencial, limpieza lista para inspección",
       "openGraph": {
         "title": "Servicios Profesionales de Limpieza - Hestia Site Solutions",
         "description": "Limpieza de precisión para entregas perfectas de proyectos. Soluciones de limpieza que cumplen con la seguridad para sitios de construcción, comerciales y residenciales.",
@@ -463,7 +465,7 @@
       "description": "Soluciones de limpieza integrales y conformes con las normas de seguridad, diseñadas para sitios de construcción, comerciales y residenciales. Nuestros equipos capacitados entregan espacios impecables, listos para inspección — a tiempo, siempre.",
       "stats": {
         "mobilization": "Respuesta Rápida\n<24H",
-        "safety": "Protocolos\nOSHA",
+        "safety": "OSHA\nCompliant",
         "inspection": "Sistema de\nControl de Calidad"
       },
       "ctaText": "SOLICITAR DISPONIBILIDAD",
@@ -471,7 +473,7 @@
     },
     "overview": {
       "title": "RESUMEN",
-      "description": "Proporcionamos servicios completos de limpieza post-construcción, incluyendo eliminación de escombros, detallado de superficies y control de polvo, para preparar su sitio para la entrega al cliente o la ocupación. Nuestros equipos están capacitados en OSHA, totalmente asegurados y equipados con sistemas de limpieza de grado industrial. Desde construcciones comerciales hasta residencias de lujo, garantizamos que cada superficie — desde pisos hasta accesorios — cumpla con el más alto estándar de limpieza.",
+      "description": "Proporcionamos servicios completos de limpieza profesional, incluyendo eliminación de escombros, detallado de superficies y control de polvo, para preparar su sitio para la entrega al cliente o la ocupación. Nuestros equipos están capacitados en OSHA, totalmente asegurados y equipados con sistemas de limpieza de grado industrial. Desde construcciones comerciales hasta residencias de lujo, garantizamos que cada superficie — desde pisos hasta accesorios — cumpla con el más alto estándar de limpieza.",
       "coverage": {
         "area1": "Houston",
         "area2": "Katy • Sugar Land",
@@ -528,7 +530,7 @@
         "description": "Retoques antes del recorrido con el cliente."
       },
       "c8": {
-        "title": "Lipieza de Pisos y de Alfombras",
+        "title": "Limpieza de Alfombras",
         "description": "Habitaciones, salas de estar, oficina. Extracción con Agua Caliente (HWE)."
       }
     },
@@ -626,7 +628,7 @@
   "CleaningContact": {
     "hero": {
       "title": "SOLICITA SERVICIOS DE LIMPIEZA",
-      "subtitle": "Movilización en 48 horas para tus necesidades de limpieza post-construcción"
+      "subtitle": "Movilización en 48 horas para tus necesidades de limpieza profesional"
     },
     "form": {
       "title": "Obtén Tu Cotización Gratuita",
@@ -645,10 +647,11 @@
         "submitting": "Enviando..."
       },
       "projectTypes": {
-        "commercial": "Construcción Comercial",
-        "residential": "Residencial",
-        "renovation": "Renovación",
-        "industrial": "Industrial"
+        "postConstruction": "Limpieza Post-Construcción",
+        "residential": "Limpieza Residencial",
+        "commercial": "Limpieza Comercial",
+        "junkHauling": "Retiro de Escombros y Basura",
+        "specialty": "Especialidad / Otro"
       },
       "timelines": {
         "immediate": "Inmediato",

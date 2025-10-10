@@ -2,3 +2,14 @@ name = "hestia-site-v2"
 compatibility_date = "2025-03-19"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
+
+# Environment variables for local development
+# For production, set these in Cloudflare Pages dashboard
+[vars]
+NEXT_PUBLIC_BASE_URL = "https://hestia-site-solutions.com"
+
+# Secret variables (set in Cloudflare Pages dashboard for production)
+# In development, these come from .env.local
+# RESEND_MAIL = "your_resend_api_key"
+# RESEND_AUDIENCE_ID = "your_audience_id"
+# GOOGLE_VERIFICATION = "your_verification_code"

@@ -34,6 +34,9 @@ export function Navbar({ invert = false }: NavbarProps) {
   // Force white background for cleaning-contact page
   const isCleaningContactPage = pathname?.includes('/cleaning-contact');
   const shouldUseWhiteBg = isCleaningContactPage;
+  
+  // Determine if navbar should show dark text (white background)
+  const shouldUseDarkText = scrollY > 50 || shouldUseWhiteBg;
 
   const navbarItems = React.useMemo(() => ({
     home: { title: t('home'), href: "/cleaning" },
@@ -81,12 +84,12 @@ export function Navbar({ invert = false }: NavbarProps) {
         backdropFilter: scrollY > 50 || shouldUseWhiteBg ? "blur(10px)" : "none",
       }}
       transition={{ duration: 0.3 }}
-      className={cn("flex items-center px-8  text-xl fixed top-0 left-0 right-0 z-50 shadow-md", (invert && !shouldUseWhiteBg) && "text-white")}
+      className={cn("flex items-center px-8  text-xl fixed top-0 left-0 right-0 z-50 shadow-md", (invert && !shouldUseDarkText) && "text-white")}
     >
       {/* Left Section: Logo */}
       <div className="flex-1 flex items-center">
         <TransitionLink href="/cleaning" className="flex items-center z-50">
-          <Logo inverted={invert && !shouldUseWhiteBg} className={cn("w-36 h-auto", { "opacity-0": isMenuOpen })} />
+          <Logo inverted={invert && !shouldUseDarkText} className={cn("w-36 h-auto", { "opacity-0": isMenuOpen })} />
         </TransitionLink>
       </div>
 
@@ -100,7 +103,7 @@ export function Navbar({ invert = false }: NavbarProps) {
                 className={cn(
                   "group inline-flex h-9 w-max items-center justify-center rounded-sm px-4 py-2 text-sm font-medium transition-colors focus:outline-none",
                   "font-bellefair text-base ",
-                  (invert && !shouldUseWhiteBg)
+                  (invert && !shouldUseDarkText)
                     ? "text-amber-400 hover:text-yellow-400" 
                     : "text-amber-500 hover:text-amber-600"
                 )}
@@ -116,7 +119,7 @@ export function Navbar({ invert = false }: NavbarProps) {
                   className={cn(
                     "group inline-flex h-9 w-max items-center justify-center rounded-sm px-4 py-2 text-sm  transition-colors focus:outline-none",
                     "font-bellefair text-base",
-                    (invert && !shouldUseWhiteBg)
+                    (invert && !shouldUseDarkText)
                       ? "text-white hover:text-amber-400" 
                       : "text-gray-700 hover:text-amber-500"
                   )}
@@ -133,8 +136,8 @@ export function Navbar({ invert = false }: NavbarProps) {
       <div className="hidden md:flex flex-1 justify-end items-center space-x-6">
         {/* Language Switcher */}
         <LanguageSwitcher 
-          className={cn((invert && !shouldUseWhiteBg) ? "text-white" : "text-black")}
-          buttonClassName={cn((invert && !shouldUseWhiteBg) ? "text-white" : "text-black")}
+          className={cn((invert && !shouldUseDarkText) ? "text-white" : "text-black")}
+          buttonClassName={cn((invert && !shouldUseDarkText) ? "text-white" : "text-black")}
         />
 
         <TransitionLink href={navbarItems.contact.href} >
@@ -152,8 +155,8 @@ export function Navbar({ invert = false }: NavbarProps) {
       <div className="md:hidden flex items-center space-x-4">
         {/* Language Switcher for Mobile */}
         <LanguageSwitcher 
-          className={cn(isMenuOpen ? "text-white" : (invert && !shouldUseWhiteBg) ? "text-white" : "text-black")}
-          buttonClassName={cn(isMenuOpen ? "text-white" : (invert && !shouldUseWhiteBg) ? "text-white" : "text-black")}
+          className={cn(isMenuOpen ? "text-white" : (invert && !shouldUseDarkText) ? "text-white" : "text-black")}
+          buttonClassName={cn(isMenuOpen ? "text-white" : (invert && !shouldUseDarkText) ? "text-white" : "text-black")}
         />
         
         <button
@@ -164,7 +167,7 @@ export function Navbar({ invert = false }: NavbarProps) {
           {isMenuOpen ? (
             <X className="w-8 h-8 text-white" />
           ) : (
-            <Menu className={cn("w-8 h-8", (invert && !shouldUseWhiteBg) ? "text-white" : "text-black")} />
+            <Menu className={cn("w-8 h-8", (invert && !shouldUseDarkText) ? "text-white" : "text-black")} />
           )}
         </button>
       </div>
