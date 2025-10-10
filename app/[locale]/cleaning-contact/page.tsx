@@ -3,8 +3,6 @@ import { getTranslations } from "next-intl/server";
 import { Navbar } from "@/components/Navbar";
 import ContactForm from "@/components/cleaning/ContactForm";
 
-export const runtime = "edge";
-
 export default async function CleaningContactPage() {
   const t = await getTranslations("CleaningContact");
   
@@ -51,10 +49,11 @@ export default async function CleaningContactPage() {
           submitting: t("form.labels.submitting"),
         }}
         projectTypes={[
-          t("form.projectTypes.commercial"),
+          t("form.projectTypes.postConstruction"),
           t("form.projectTypes.residential"),
-          t("form.projectTypes.renovation"),
-          t("form.projectTypes.industrial"),
+          t("form.projectTypes.commercial"),
+          t("form.projectTypes.junkHauling"),
+          t("form.projectTypes.specialty"),
         ]}
         timelines={[
           t("form.timelines.immediate"),

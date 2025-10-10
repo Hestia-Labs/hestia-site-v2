@@ -6,14 +6,16 @@ import { Separator } from "@/components/ui/separator";
 import { Phone, Mail, MapPin, Clock, Shield, Award } from "lucide-react";
 import Logo from "./Logo";
 import { useTranslations } from "next-intl";
+import { subscribeToNewsletter } from "@/app/actions/newsletter";
 
 export default function Footer() {
-  const t = useTranslations('Footer');
+  const t = useTranslations('CleaningFooter');
   
   const [formStatus, setFormStatus] = React.useState<{
     success: boolean;
     error: string | null;
-  }>({ success: false, error: null });
+    isSubmitting: boolean;
+  }>({ success: false, error: null, isSubmitting: false });
 
   const footerContent = React.useMemo(() => ({
     quickLinks: [
@@ -26,7 +28,13 @@ export default function Footer() {
     contact: {
       phone: t('contact.phone'),
       email: t('contact.email'),
-      address: [t('contact.areas.houston'), t('contact.areas.suburbs'), t('contact.areas.north')],
+      address: [
+        t('contact.areas.houston'),
+        t('contact.areas.katy'),
+        t('contact.areas.sugarLand'),
+        t('contact.areas.woodlands'),
+        t('contact.areas.cypress')
+      ],
       hours: t('contact.hours'),
     },
     certifications: [
@@ -41,19 +49,43 @@ export default function Footer() {
     ],
   }), [t]);
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
-    const email = formData.get("email");
+    const email = formData.get("email") as string;
 
-    if (email) {
-      console.log("Submitted email:", email);
-      setFormStatus({ success: true, error: null });
-      event.currentTarget.reset();
-    } else {
+    if (!email || !email.includes('@')) {
       setFormStatus({
         success: false,
         error: t('newsletter.error'),
+        isSubmitting: false,
+      });
+      return;
+    }
+
+    setFormStatus({ success: false, error: null, isSubmitting: true });
+
+    try {
+      const result = await subscribeToNewsletter(email);
+
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to subscribe');
+      }
+
+      setFormStatus({ success: true, error: null, isSubmitting: false });
+      event.currentTarget.reset();
+      
+      // Clear success message after 5 seconds
+      setTimeout(() => {
+        setFormStatus({ success: false, error: null, isSubmitting: false });
+      }, 5000);
+
+    } catch (error) {
+      console.error('Newsletter subscription error:', error);
+      setFormStatus({
+        success: false,
+        error: t('newsletter.error'),
+        isSubmitting: false,
       });
     }
   };
@@ -166,9 +198,10 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-gray-900  rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5"
+                  disabled={formStatus.isSubmitting}
+                  className="px-6 py-3 bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-gray-900 rounded-lg transition-all hover:shadow-lg hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {t('newsletter.subscribe')}
+                  {formStatus.isSubmitting ? 'SUBSCRIBING...' : t('newsletter.subscribe')}
                 </button>
               </form>
               {formStatus.success && (

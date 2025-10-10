@@ -18,6 +18,7 @@ import {
   Clock
 } from "lucide-react";
 import { useTranslations } from "next-intl";
+import { submitContactForm } from "@/app/actions/contact";
 
 interface ContactFormProps {
   title: string;
@@ -64,11 +65,35 @@ export default function ContactForm({
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    // Handle form submission success
+    try {
+      const result = await submitContactForm(formData);
+
+      if (!result.success) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
+      // Success - reset form
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        company: "",
+        projectType: "",
+        location: "",
+        timeline: "",
+        squareFootage: "",
+        details: "",
+      });
+
+      // Show success message (you can add a toast notification here)
+      alert('Thank you! Your message has been sent successfully. We will contact you soon.');
+      
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('There was an error sending your message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (field: string, value: string) => {
